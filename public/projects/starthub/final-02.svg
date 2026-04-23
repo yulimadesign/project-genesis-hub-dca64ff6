@@ -1,0 +1,17 @@
+<svg width="1400" height="920" viewBox="0 0 1400 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="920" rx="32" fill="#F7F2EA"/>
+  <rect x="72" y="72" width="1256" height="776" rx="28" fill="#FFFDF8" stroke="#D9D0C4"/>
+  <text x="124" y="172" fill="#1F262D" font-family="Georgia, serif" font-size="48">Set up your workspace with less guesswork</text>
+  <rect x="124" y="220" width="486" height="534" rx="24" fill="#FFFFFF" stroke="#E0D7CC"/>
+  <rect x="662" y="220" width="614" height="534" rx="24" fill="#F2F7F4"/>
+  <rect x="164" y="302" width="146" height="146" rx="26" fill="#DBEEE8"/>
+  <rect x="338" y="316" width="220" height="18" rx="9" fill="#1F262D"/>
+  <rect x="338" y="354" width="188" height="12" rx="6" fill="#95A2AA"/>
+  <rect x="338" y="396" width="164" height="46" rx="23" fill="#1F6B67"/>
+  <rect x="164" y="500" width="394" height="156" rx="22" fill="#F5EFE6"/>
+  <rect x="714" y="304" width="510" height="18" rx="9" fill="#244047"/>
+  <rect x="714" y="344" width="420" height="12" rx="6" fill="#95A2AA"/>
+  <rect x="714" y="404" width="510" height="82" rx="22" fill="#FFFFFF"/>
+  <rect x="714" y="516" width="510" height="82" rx="22" fill="#FFFFFF"/>
+  <rect x="714" y="628" width="510" height="82" rx="22" fill="#FFFFFF"/>
+</svg>

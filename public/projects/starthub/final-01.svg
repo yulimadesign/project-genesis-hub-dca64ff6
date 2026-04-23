@@ -1,0 +1,20 @@
+<svg width="1400" height="920" viewBox="0 0 1400 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="920" rx="32" fill="#F7F2EA"/>
+  <rect x="72" y="72" width="1256" height="776" rx="28" fill="#FFFDF8" stroke="#D9D0C4"/>
+  <rect x="126" y="136" width="278" height="648" rx="22" fill="#F4F7FB"/>
+  <rect x="438" y="136" width="836" height="648" rx="22" fill="#FFFFFF" stroke="#E2DBD1"/>
+  <rect x="168" y="208" width="194" height="18" rx="9" fill="#1F262D"/>
+  <rect x="168" y="248" width="148" height="12" rx="6" fill="#95A2AA"/>
+  <rect x="168" y="308" width="194" height="94" rx="18" fill="#DBEEE8"/>
+  <rect x="168" y="430" width="194" height="94" rx="18" fill="#E9EFF9"/>
+  <rect x="168" y="552" width="194" height="94" rx="18" fill="#F5EFE6"/>
+  <text x="498" y="204" fill="#1F262D" font-family="Georgia, serif" font-size="52">Welcome to StartHub</text>
+  <text x="498" y="248" fill="#55616A" font-family="Helvetica, Arial, sans-serif" font-size="24">Let’s get your first workflow live in a few clear steps.</text>
+  <rect x="498" y="302" width="718" height="182" rx="24" fill="#EDF5F2"/>
+  <rect x="538" y="346" width="280" height="16" rx="8" fill="#244047"/>
+  <rect x="538" y="384" width="240" height="12" rx="6" fill="#7F8E97"/>
+  <rect x="538" y="432" width="146" height="46" rx="23" fill="#1F6B67"/>
+  <rect x="498" y="530" width="718" height="198" rx="24" fill="#FBF8F1"/>
+  <rect x="538" y="578" width="300" height="16" rx="8" fill="#244047"/>
+  <rect x="538" y="616" width="616" height="12" rx="6" fill="#A3AEB5"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg width="1400" height="920" viewBox="0 0 1400 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="920" rx="32" fill="#F3F0EA"/>
+  <rect x="72" y="72" width="1256" height="776" rx="28" fill="#FFFDF8" stroke="#D8CFC3"/>
+  <text x="128" y="174" fill="#1F262D" font-family="Georgia, serif" font-size="48">Template-driven editing with stronger defaults</text>
+  <rect x="128" y="228" width="514" height="560" rx="24" fill="#FFFFFF" stroke="#E0D7CC"/>
+  <rect x="694" y="228" width="578" height="560" rx="24" fill="#F7FBFC"/>
+  <rect x="174" y="312" width="420" height="16" rx="8" fill="#1F262D"/>
+  <rect x="174" y="350" width="244" height="12" rx="6" fill="#97A4AB"/>
+  <rect x="174" y="406" width="420" height="94" rx="18" fill="#F5F8FC"/>
+  <rect x="174" y="530" width="420" height="94" rx="18" fill="#F5EFE6"/>
+  <rect x="174" y="654" width="176" height="48" rx="24" fill="#1F6B67"/>
+  <rect x="742" y="304" width="482" height="76" rx="20" fill="#FFFFFF"/>
+  <rect x="742" y="408" width="482" height="76" rx="20" fill="#FFFFFF"/>
+  <rect x="742" y="512" width="482" height="76" rx="20" fill="#FFFFFF"/>
+  <rect x="742" y="616" width="482" height="76" rx="20" fill="#FFFFFF"/>
+</svg>

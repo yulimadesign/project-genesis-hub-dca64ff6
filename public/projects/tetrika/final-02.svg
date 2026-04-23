@@ -1,0 +1,14 @@
+<svg width="1400" height="920" viewBox="0 0 1400 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="920" rx="32" fill="#F6F2EA"/>
+  <rect x="72" y="72" width="1256" height="776" rx="28" fill="#FFFDF8" stroke="#DAD1C5"/>
+  <text x="132" y="176" fill="#1F262D" font-family="Georgia, serif" font-size="48">A clearer rhythm for progress and next steps</text>
+  <rect x="132" y="232" width="432" height="548" rx="24" fill="#FFFFFF" stroke="#E0D7CC"/>
+  <rect x="610" y="232" width="658" height="548" rx="24" fill="#F6FAF7"/>
+  <rect x="178" y="308" width="340" height="86" rx="20" fill="#E8F0FE"/>
+  <rect x="178" y="424" width="340" height="182" rx="20" fill="#F7F1E8"/>
+  <rect x="178" y="636" width="174" height="46" rx="23" fill="#1F6B67"/>
+  <rect x="654" y="302" width="570" height="80" rx="20" fill="#FFFFFF"/>
+  <rect x="654" y="412" width="570" height="80" rx="20" fill="#FFFFFF"/>
+  <rect x="654" y="522" width="570" height="80" rx="20" fill="#FFFFFF"/>
+  <rect x="654" y="632" width="570" height="80" rx="20" fill="#FFFFFF"/>
+</svg>

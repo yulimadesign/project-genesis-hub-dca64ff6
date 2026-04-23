@@ -1,0 +1,24 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" rx="32" fill="#F8F4EC"/>
+  <rect x="52" y="52" width="1096" height="526" rx="28" fill="url(#bg)"/>
+  <rect x="92" y="98" width="344" height="430" rx="24" fill="#FFFDF8" stroke="#D9D0C4"/>
+  <rect x="474" y="98" width="634" height="152" rx="24" fill="#FFFDF8" stroke="#D9D0C4"/>
+  <rect x="474" y="274" width="302" height="254" rx="24" fill="#FFFDF8" stroke="#D9D0C4"/>
+  <rect x="806" y="274" width="302" height="254" rx="24" fill="#FFFDF8" stroke="#D9D0C4"/>
+  <text x="124" y="184" fill="#1F262D" font-family="Georgia, serif" font-size="58">Yulia McCoy</text>
+  <text x="124" y="236" fill="#55616A" font-family="Helvetica, Arial, sans-serif" font-size="28">Designing complex product systems with clarity,</text>
+  <text x="124" y="274" fill="#55616A" font-family="Helvetica, Arial, sans-serif" font-size="28">structure, and measurable momentum.</text>
+  <text x="124" y="430" fill="#1F6B67" font-family="Helvetica, Arial, sans-serif" font-size="18" letter-spacing="3">PORTFOLIO</text>
+  <text x="510" y="166" fill="#1F262D" font-family="Georgia, serif" font-size="34">Research-driven product design case studies</text>
+  <text x="510" y="214" fill="#55616A" font-family="Helvetica, Arial, sans-serif" font-size="22">Onboarding, internal tools, and education experiences built for clarity.</text>
+  <text x="510" y="350" fill="#1F262D" font-family="Georgia, serif" font-size="26">8x faster workflow</text>
+  <text x="510" y="388" fill="#55616A" font-family="Helvetica, Arial, sans-serif" font-size="18">Systems and operations design</text>
+  <text x="842" y="350" fill="#1F262D" font-family="Georgia, serif" font-size="26">27% engagement lift</text>
+  <text x="842" y="388" fill="#55616A" font-family="Helvetica, Arial, sans-serif" font-size="18">Student dashboard redesign</text>
+  <defs>
+    <linearGradient id="bg" x1="70" y1="52" x2="1134" y2="578" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF9EF"/>
+      <stop offset="1" stop-color="#F0ECE3"/>
+    </linearGradient>
+  </defs>
+</svg>

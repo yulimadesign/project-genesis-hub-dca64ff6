@@ -1,0 +1,18 @@
+<svg width="960" height="980" viewBox="0 0 960 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="980" rx="40" fill="#F3F0EA"/>
+  <rect x="58" y="58" width="844" height="864" rx="30" fill="#FFFDF8" stroke="#D8CFC3"/>
+  <rect x="108" y="120" width="744" height="120" rx="24" fill="#EEF4F7"/>
+  <rect x="108" y="274" width="232" height="594" rx="24" fill="#FFFFFF" stroke="#DED4C8"/>
+  <rect x="368" y="274" width="484" height="594" rx="24" fill="#F9FBFD" stroke="#DED4C8"/>
+  <text x="140" y="198" fill="#1F262D" font-family="Georgia, serif" font-size="50">SberMegaMarket</text>
+  <text x="140" y="236" fill="#56626A" font-family="Helvetica, Arial, sans-serif" font-size="22">Content Creation App</text>
+  <rect x="144" y="342" width="160" height="16" rx="8" fill="#1F262D"/>
+  <rect x="144" y="380" width="126" height="12" rx="6" fill="#96A3AB"/>
+  <rect x="144" y="438" width="160" height="84" rx="18" fill="#E9EFF9"/>
+  <rect x="144" y="548" width="160" height="84" rx="18" fill="#DBEEE8"/>
+  <rect x="400" y="338" width="416" height="18" rx="9" fill="#1F262D"/>
+  <rect x="400" y="380" width="228" height="12" rx="6" fill="#96A3AB"/>
+  <rect x="400" y="430" width="416" height="116" rx="20" fill="#FFFFFF"/>
+  <rect x="400" y="574" width="416" height="116" rx="20" fill="#FFFFFF"/>
+  <rect x="400" y="718" width="416" height="116" rx="20" fill="#F6F1E8"/>
+</svg>

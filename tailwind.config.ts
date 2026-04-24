@@ -40,6 +40,10 @@ export default {
           foreground: "hsl(var(--accent-foreground))",
         },
         surface: "hsl(var(--surface))",
+        coral: {
+          DEFAULT: "hsl(var(--coral))",
+          soft: "hsl(var(--coral-soft))",
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
@@ -60,8 +64,8 @@ export default {
         },
       },
       fontFamily: {
-        display: ["Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Georgia", "serif"],
-        body: ["Avenir Next", "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+        display: ["Sora", "Inter", "system-ui", "sans-serif"],
+        body: ["Outfit", "Inter", "system-ui", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

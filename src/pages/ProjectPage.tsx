@@ -37,11 +37,11 @@ const ProjectPage = () => {
           padding: "4.5rem 0 3rem",
         }}
       >
-        <div>
+        <div className="reveal">
           <p className="eyebrow">Case Study</p>
           <h1
             className="display m-0"
-            style={{ fontSize: "var(--step-4)", lineHeight: 1 }}
+            style={{ fontSize: "var(--step-4)", lineHeight: 1, letterSpacing: "-0.03em" }}
           >
             {project.pageTitle}
           </h1>

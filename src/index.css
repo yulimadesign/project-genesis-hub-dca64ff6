@@ -2,45 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Yulia McCoy portfolio — analytical, calm, warm-neutral design system.
-   Display: serif. Body: clean sans. Accent: muted teal. All colors HSL. */
+/* Yulia McCoy portfolio — Compound-inspired warm minimal system.
+   Display: Sora. Body: Outfit. Accent: Electric Coral gradient. All colors HSL. */
 
 @layer base {
   :root {
-    /* Warm off-white foundation */
-    --background: 41 50% 94%;          /* #f5f1e8 */
-    --background-soft: 38 67% 97%;     /* #fbf7f0 */
-    --foreground: 213 18% 15%;         /* #20262d */
-    --muted-foreground: 211 8% 38%;    /* #58626a */
+    /* Warm cream foundation */
+    --background: 36 40% 96%;          /* #f8f4ee */
+    --background-soft: 38 60% 98%;     /* #fcf9f3 */
+    --foreground: 220 18% 12%;         /* #191d24 */
+    --muted-foreground: 220 8% 42%;    /* #5f666f */
 
-    /* Translucent surfaces over the warm bg (used as rgba via utility classes) */
-    --surface: 40 100% 99%;
+    --surface: 0 0% 100%;
 
-    --card: 40 100% 99%;
-    --card-foreground: 213 18% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 18% 12%;
 
-    --popover: 40 100% 99%;
-    --popover-foreground: 213 18% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 18% 12%;
 
-    /* Muted teal accent */
-    --primary: 177 55% 27%;            /* #1f6b67 */
-    --primary-foreground: 38 67% 97%;
-    --accent: 177 55% 27%;
-    --accent-foreground: 38 67% 97%;
+    /* Electric Coral gradient stops */
+    --coral: 14 95% 60%;               /* #fb6a3a — primary coral */
+    --coral-soft: 22 100% 68%;         /* #ff955b — gradient end */
+    --coral-glow: 14 95% 60% / 0.18;
 
-    --secondary: 41 35% 88%;
-    --secondary-foreground: 213 18% 15%;
+    --primary: 14 95% 60%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 22 100% 68%;
+    --accent-foreground: 220 18% 12%;
 
-    --muted: 41 35% 90%;
+    --secondary: 36 30% 90%;
+    --secondary-foreground: 220 18% 12%;
 
-    --destructive: 0 65% 48%;
-    --destructive-foreground: 38 67% 97%;
+    --muted: 36 28% 92%;
 
-    --border: 213 18% 15% / 0.14;      /* used as hsl(var(--border)) — keep alpha */
-    --input: 213 18% 15%;
-    --ring: 177 55% 27%;
+    --destructive: 0 70% 52%;
+    --destructive-foreground: 0 0% 100%;
 
-    --radius: 1.4rem;
+    --border: 220 18% 12% / 0.10;
+    --input: 220 18% 12%;
+    --ring: 14 95% 60%;
+
+    --radius: 1rem;
+
+    /* Brand gradient */
+    --gradient-coral: linear-gradient(120deg, hsl(var(--coral)) 0%, hsl(var(--coral-soft)) 100%);
+    --shadow-coral: 0 1.2rem 2.4rem -1rem hsl(14 95% 60% / 0.35);
+    --shadow-soft: 0 1.5rem 3rem -2rem hsl(220 25% 12% / 0.18);
 
     /* Fluid type scale */
     --step--1: clamp(0.9rem, 0.86rem + 0.2vw, 1rem);
@@ -50,8 +58,8 @@
     --step-3: clamp(2.1rem, 1.7rem + 1.9vw, 3.25rem);
     --step-4: clamp(3rem, 2.4rem + 2.8vw, 4.8rem);
 
-    --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-    --font-body: "Avenir Next", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-display: "Sora", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-body: "Outfit", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -104,7 +112,7 @@
 
 @layer base {
   * {
-    border-color: hsl(213 18% 15% / 0.14);
+    border-color: hsl(220 18% 12% / 0.10);
     box-sizing: border-box;
   }
 
@@ -120,24 +128,13 @@
     margin: 0;
     min-height: 100vh;
     background:
-      radial-gradient(circle at top left, hsl(177 55% 27% / 0.12), transparent 28rem),
-      radial-gradient(circle at 80% 20%, hsl(28 41% 56% / 0.08), transparent 20rem),
-      linear-gradient(180deg, #fcfaf4 0%, hsl(var(--background)) 100%);
+      radial-gradient(circle at 88% 12%, hsl(var(--coral) / 0.18), transparent 32rem),
+      radial-gradient(circle at 8% 90%, hsl(22 100% 68% / 0.10), transparent 28rem),
+      linear-gradient(180deg, hsl(var(--background-soft)) 0%, hsl(var(--background)) 100%);
   }
 
   body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    background-image:
-      linear-gradient(hsl(213 18% 15% / 0.025) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(213 18% 15% / 0.025) 1px, transparent 1px);
-    background-size: 2.4rem 2.4rem;
-    -webkit-mask-image: radial-gradient(circle at center, black 35%, transparent 80%);
-    mask-image: radial-gradient(circle at center, black 35%, transparent 80%);
-    opacity: 0.35;
+    content: none;
   }
 
   main {
@@ -148,7 +145,7 @@
   a:focus-visible,
   button:focus-visible,
   .focus-ring:focus-visible {
-    outline: 3px solid hsl(177 55% 27% / 0.35);
+    outline: 3px solid hsl(var(--coral) / 0.45);
     outline-offset: 4px;
     border-radius: 4px;
   }
@@ -173,38 +170,123 @@
     margin: 0 auto;
   }
   .surface {
-    background: hsl(40 100% 99% / 0.72);
-    border: 1px solid hsl(213 18% 15% / 0.14);
-    border-radius: 2rem;
+    background: hsl(0 0% 100% / 0.72);
+    border: 1px solid hsl(220 18% 12% / 0.08);
+    border-radius: 1.4rem;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    box-shadow: 0 1.25rem 2.5rem -2rem hsl(220 25% 12% / 0.08);
+    box-shadow: var(--shadow-soft);
   }
   .eyebrow {
     margin: 0 0 0.75rem;
-    color: hsl(var(--primary));
+    color: hsl(var(--coral));
     font-size: var(--step--1);
-    letter-spacing: 0.12em;
+    letter-spacing: 0.18em;
+    font-weight: 500;
     text-transform: uppercase;
   }
   .section-label {
     margin: 0 0 0.75rem;
     font-size: var(--step--1);
-    letter-spacing: 0.08em;
+    letter-spacing: 0.18em;
+    font-weight: 500;
     text-transform: uppercase;
     color: hsl(var(--muted-foreground));
   }
   .section-title {
     margin: 0;
     font-family: var(--font-display);
+    font-weight: 600;
     font-size: var(--step-2);
-    line-height: 1.1;
+    line-height: 1.12;
+    letter-spacing: -0.01em;
   }
   .display {
     font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
   }
   .muted {
     color: hsl(var(--muted-foreground));
+  }
+  .coral-text {
+    background: var(--gradient-coral);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+  .coral-underline {
+    position: relative;
+    display: inline-block;
+    color: hsl(var(--foreground));
+  }
+  .coral-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.04em;
+    height: 0.42em;
+    background: var(--gradient-coral);
+    opacity: 0.85;
+    z-index: -1;
+    border-radius: 0.2em;
+  }
+  .pill-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.6rem;
+    border-radius: 999px;
+    background: var(--gradient-coral);
+    color: hsl(var(--primary-foreground));
+    font-weight: 500;
+    box-shadow: var(--shadow-coral);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+  }
+  .pill-cta:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+  }
+  .pill-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 999px;
+    background: hsl(0 0% 100% / 0.7);
+    border: 1px solid hsl(220 18% 12% / 0.12);
+    color: hsl(var(--foreground));
+    font-weight: 500;
+    transition: background 0.18s ease, border-color 0.18s ease;
+  }
+  .pill-ghost:hover {
+    background: hsl(0 0% 100%);
+    border-color: hsl(220 18% 12% / 0.22);
+  }
+  .metric-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 999px;
+    background: hsl(var(--coral) / 0.14);
+    color: hsl(var(--coral));
+    font-size: 0.85rem;
+    margin-left: 0.4rem;
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: reveal-up 0.7s cubic-bezier(.2,.7,.2,1) forwards;
+  }
+  .reveal-2 { animation-delay: 0.08s; }
+  .reveal-3 { animation-delay: 0.16s; }
+  .reveal-4 { animation-delay: 0.24s; }
+  @keyframes reveal-up {
+    to { opacity: 1; transform: translateY(0); }
   }
   @media (max-width: 720px) {
     .page-wrap, .content-wrap {

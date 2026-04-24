@@ -3,32 +3,39 @@ import { siteContent } from "@/data/site";
 
 const SiteFooter = () => {
   const { email, contactLinks } = siteContent;
+  const year = new Date().getFullYear();
   return (
     <footer
-      className="site-footer surface content-wrap"
+      className="site-footer content-wrap"
       id="contact"
-      style={{ margin: "6rem auto 3rem", padding: "3rem" }}
+      style={{ margin: "3rem auto 2rem", padding: "2.5rem 0 0" }}
     >
-      <div className="grid items-end gap-12 max-[720px]:grid-cols-1" style={{ gridTemplateColumns: "minmax(0,1.8fr) minmax(16rem,1fr)" }}>
-        <div className="grid gap-3">
-          <p className="section-label">Contact</p>
-          <h2 className="section-title">
-            Let’s talk about product design that makes complex work feel obvious.
-          </h2>
-          <a
-            className="focus-ring underline underline-offset-4 decoration-1"
-            href={`mailto:${email}`}
-            style={{ fontSize: "var(--step-1)" }}
-          >
-            {email}
-          </a>
+      <div
+        className="flex items-center justify-between gap-6 flex-wrap pt-6"
+        style={{ borderTop: "1px solid hsl(220 18% 12% / 0.10)" }}
+      >
+        <div className="flex items-center gap-3">
+          <span className="display" style={{ fontWeight: 700 }}>
+            Yulia<span className="coral-text">.</span>McCoy
+          </span>
+          <span className="muted text-sm">
+            © {year} — Senior Product Designer
+          </span>
         </div>
 
-        <ul className="grid gap-3 justify-items-start m-0 p-0 list-none">
+        <ul className="flex flex-wrap items-center gap-x-5 gap-y-2 m-0 p-0 list-none text-sm">
+          <li>
+            <a
+              href={`mailto:${email}`}
+              className="focus-ring muted hover:text-foreground transition"
+            >
+              {email}
+            </a>
+          </li>
           {contactLinks.map((link) => {
             const isInternal = link.href.startsWith("/");
             const className =
-              "focus-ring muted hover:text-foreground hover:translate-x-0.5 transition";
+              "focus-ring muted hover:text-foreground transition";
             return (
               <li key={link.label}>
                 {isInternal ? (

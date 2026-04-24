@@ -13,10 +13,18 @@ export interface Company {
   note?: string;
 }
 
+export interface Service {
+  title: string;
+  description: string;
+}
+
 export interface SiteContent {
   headline: string;
+  headlineHighlight: string;
+  headlineSuffix: string;
   supportingLine: string;
   metrics: Metric[];
+  services: Service[];
   bio: string[];
   credibilityCompanies: Company[];
   contactLinks: ContactLink[];
@@ -27,14 +35,33 @@ export interface SiteContent {
 }
 
 export const siteContent: SiteContent = {
-  headline:
-    "Designing complex product systems with clarity, structure, and measurable momentum.",
+  headline: "Design is a",
+  headlineHighlight: "growth system",
+  headlineSuffix: ".",
   supportingLine:
-    "Focused product and UX design for teams that need onboarding, workflows, and user journeys to feel calm, legible, and ready to scale.",
+    "I design product experiences that compound—turning research, structure, and measurable iteration into onboarding, workflows, and journeys teams can scale. No vanity screens. No design for design's sake.",
   metrics: [
-    { value: "8x faster", label: "content workflow" },
-    { value: "27% increase", label: "engagement" },
-    { value: "28% reduction", label: "design iteration time" },
+    { value: "8x", label: "Faster content workflow" },
+    { value: "+27%", label: "Engagement uplift" },
+    { value: "−28%", label: "Design iteration time" },
+    { value: "6+", label: "Years experience" },
+  ],
+  services: [
+    {
+      title: "Onboarding & Activation",
+      description:
+        "First-run flows that frame decisions clearly so new users reach their first success faster.",
+    },
+    {
+      title: "Workflows & Internal Tools",
+      description:
+        "Dense operational interfaces restructured around real tasks, hierarchy, and team velocity.",
+    },
+    {
+      title: "Product Systems & UX Strategy",
+      description:
+        "Research-led journeys, IA, and component patterns that turn ambiguity into a scalable structure.",
+    },
   ],
   bio: [
     "With 6+ years of experience, Yulia has shaped onboarding, internal tools, and education products across startup, e-commerce, and EdTech environments.",

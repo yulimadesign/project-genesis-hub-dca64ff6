@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import MetricsStrip from "@/components/MetricsStrip";
 import ProjectCard from "@/components/ProjectCard";
-import ServicesStrip from "@/components/ServicesStrip";
 import SiteShell from "@/components/SiteShell";
 import { getProjects } from "@/data/projects";
 import { siteContent } from "@/data/site";
@@ -106,9 +105,6 @@ const Index = () => {
 
       {/* Metrics */}
       <MetricsStrip metrics={siteContent.metrics} />
-
-      {/* Services */}
-      <ServicesStrip services={siteContent.services} />
 
       {/* Projects */}
       <section

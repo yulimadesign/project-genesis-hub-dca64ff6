@@ -136,7 +136,7 @@ Key design tokens include:
 
 - Warm cream background colors.
 - Dark neutral foreground colors.
-- Coral accent and coral gradient values.
+- `#6F82E2` blue accent and supporting gradient values.
 - Reusable shadows.
 - Fluid type scale variables.
 - Display and body font stacks.
@@ -160,6 +160,8 @@ Reusable CSS classes include:
 - `.reveal`
 
 Tailwind remains the primary layout layer, while CSS variables and component classes preserve the portfolio's visual identity.
+
+The accent color is defined in `src/index.css` as HSL `230 66% 66%`, matching `#6F82E2`. Some reusable CSS hooks still use legacy `coral` names for compatibility, but they now render the blue accent.
 
 ## Assets
 

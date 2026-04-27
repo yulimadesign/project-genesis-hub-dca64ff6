@@ -113,7 +113,7 @@ To add a new case study:
 
 The visual language is defined mostly in `src/index.css` and extended by `tailwind.config.ts`.
 
-- CSS variables define the warm background, foreground, coral accent, radius, shadows, and type scale.
+- CSS variables define the warm background, foreground, `#6F82E2` blue accent, radius, shadows, and type scale.
 - `.page-wrap` and `.content-wrap` control consistent page widths.
 - `.surface`, `.pill-cta`, `.pill-ghost`, `.eyebrow`, `.display`, and related classes provide reusable visual patterns.
 - Tailwind utilities handle responsive layout, spacing, grid behavior, and component composition.

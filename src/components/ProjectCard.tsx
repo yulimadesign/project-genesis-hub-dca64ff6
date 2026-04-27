@@ -28,7 +28,7 @@ const ProjectCard = ({ project }: Props) => (
           className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300"
           style={{
             background:
-              "linear-gradient(180deg, transparent 40%, hsl(14 95% 60% / 0.18) 100%)",
+              "linear-gradient(180deg, transparent 40%, hsl(var(--coral) / 0.18) 100%)",
           }}
         />
       </div>

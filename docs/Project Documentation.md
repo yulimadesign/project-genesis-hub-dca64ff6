@@ -151,6 +151,7 @@ Reusable CSS classes include:
 - `.section-label`
 - `.section-title`
 - `.display`
+- `.case-hero-title`
 - `.muted`
 - `.coral-text`
 - `.coral-underline`
@@ -170,7 +171,8 @@ Static assets live in `public`.
 - `public/favicon.ico` is the favicon.
 - `public/robots.txt` configures crawler behavior.
 - `public/images/og-yulia-mccoy.svg` is the Open Graph-style image asset.
-- `public/projects/<project>/cover.svg` is used on project cards and project hero sections.
+- `public/cases/<project>-card.png` is used for homepage project cards and project hero cover images through each project's `coverImage`.
+- `public/projects/<project>/cover.svg` contains earlier SVG cover artwork that can still be reused if needed.
 - `public/projects/<project>/final-01.svg` and `final-02.svg` are used in case study final UI sections.
 
 Because Vite serves `public` from the site root, assets are referenced with root-relative URLs such as `/projects/starthub/cover.svg`.
@@ -245,13 +247,15 @@ npm run test
 
 ### Add A Project
 
-1. Create a new asset folder in `public/projects/<new-project>/`.
-2. Add a cover image and final screen images.
-3. Add a new `Project` object to `src/data/projects.ts`.
-4. Give the project a unique `slug`.
-5. Set `order` to control where it appears.
-6. Visit `/projects/<slug>` locally.
-7. Run `npm run build`.
+1. Add card artwork to `public/cases/`.
+2. Create a new asset folder in `public/projects/<new-project>/`.
+3. Add final screen images.
+4. Add a new `Project` object to `src/data/projects.ts`.
+5. Point `coverImage` to the card artwork in `public/cases`.
+6. Give the project a unique `slug`.
+7. Set `order` to control where it appears.
+8. Visit `/projects/<slug>` locally.
+9. Run `npm run build`.
 
 ### Update Contact Information
 

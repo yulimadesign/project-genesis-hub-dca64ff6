@@ -91,7 +91,7 @@ export const projects: Project[] = [
     ],
     reflection:
       "The project reinforced that onboarding quality is often less about adding more instruction and more about sequencing information in the order people can actually use it.",
-    coverImage: "/projects/starthub/cover.svg",
+    coverImage: "/cases/starthub-card.png",
     altText:
       "StartHub onboarding concept card with interface panels and typography.",
   },
@@ -156,7 +156,7 @@ export const projects: Project[] = [
     ],
     reflection:
       "This work underscored how much internal tools benefit from product-quality design when the real challenge is sustained operational clarity, not just visual polish.",
-    coverImage: "/projects/sbermegamarket/cover.svg",
+    coverImage: "/cases/sbermegamarket-card.png",
     altText:
       "SberMegaMarket internal workflow card with interface panes and editorial typography.",
   },
@@ -221,7 +221,7 @@ export const projects: Project[] = [
     ],
     reflection:
       "The strongest student dashboards do not just report information. They translate progress into a next step that feels manageable and worth doing.",
-    coverImage: "/projects/tetrika/cover.svg",
+    coverImage: "/cases/tetrika-card.png",
     altText:
       "Tetrika dashboard card with educational interface blocks and typographic overlays.",
   },

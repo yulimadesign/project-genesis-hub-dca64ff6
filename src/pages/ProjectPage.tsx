@@ -39,10 +39,7 @@ const ProjectPage = () => {
       >
         <div className="reveal">
           <p className="eyebrow">Case Study</p>
-          <h1
-            className="display m-0"
-            style={{ fontSize: "var(--step-4)", lineHeight: 1, letterSpacing: "-0.03em" }}
-          >
+          <h1 className="case-hero-title display m-0">
             {project.pageTitle}
           </h1>
           <p

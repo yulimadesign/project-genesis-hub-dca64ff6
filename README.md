@@ -71,6 +71,7 @@ npm run test
 │   ├── Project Documentation.md
 │   └── Workflow Orchestration.md
 ├── public/
+│   ├── cases/
 │   ├── images/
 │   └── projects/
 ├── src/
@@ -104,7 +105,7 @@ Most site content is stored in TypeScript data files so copy and portfolio entri
 
 To add a new case study:
 
-1. Add artwork to `public/projects/<project-name>/`.
+1. Add card artwork to `public/cases/` and detailed case study artwork to `public/projects/<project-name>/`.
 2. Add a new `Project` object to `projects` in `src/data/projects.ts`.
 3. Give it a unique `slug` and `order`.
 4. Confirm the page renders at `/projects/<slug>`.

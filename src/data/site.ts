@@ -80,5 +80,5 @@ export const siteContent: SiteContent = {
   resumeUrl: "/resume",
   linkedinUrl: "https://www.linkedin.com/in/yulia-mccoy",
   paintingPortfolioUrl: "https://example.com/painting-portfolio",
-  email: "yulia.mccoy.portfolio@example.com",
+  email: "melikhovau77@gmail.com",
 };

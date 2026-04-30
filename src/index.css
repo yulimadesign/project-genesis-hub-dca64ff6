@@ -22,14 +22,14 @@
     --popover-foreground: 220 18% 12%;
 
     /* Accent gradient stops. Legacy "coral" names remain as styling hooks. */
-    --coral: 230 66% 66%;              /* #6f82e2 — primary accent */
-    --coral-soft: 232 87% 78%;         /* #9ba8f8 — gradient end */
-    --coral-glow: 230 66% 66% / 0.18;
+    --coral: 240 76% 58%;              /* #4343e5 — primary accent */
+    --coral-soft: 240 83% 72%;         /* #7d7df4 — gradient end */
+    --coral-glow: 240 76% 58% / 0.18;
 
-    --primary: 230 66% 66%;
-    --primary-foreground: 220 18% 12%;
-    --accent: 230 66% 66%;
-    --accent-foreground: 220 18% 12%;
+    --primary: 240 76% 58%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 240 76% 58%;
+    --accent-foreground: 0 0% 100%;
 
     --secondary: 36 30% 90%;
     --secondary-foreground: 220 18% 12%;
@@ -41,13 +41,13 @@
 
     --border: 220 18% 12% / 0.10;
     --input: 220 18% 12%;
-    --ring: 230 66% 66%;
+    --ring: 240 76% 58%;
 
     --radius: 1rem;
 
     /* Brand gradient */
     --gradient-coral: linear-gradient(120deg, hsl(var(--coral)) 0%, hsl(var(--coral-soft)) 100%);
-    --shadow-coral: 0 1.2rem 2.4rem -1rem hsl(230 66% 66% / 0.35);
+    --shadow-coral: 0 1.2rem 2.4rem -1rem hsl(240 76% 58% / 0.35);
     --shadow-soft: 0 1.5rem 3rem -2rem hsl(220 25% 12% / 0.18);
 
     /* Fluid type scale */

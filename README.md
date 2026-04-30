@@ -7,7 +7,7 @@ A polished product design portfolio for Yulia McCoy, built with Vite, React, Typ
 - Homepage hero with positioning, calls to action, metrics, featured work, about content, and contact CTA.
 - Data-driven project cards and case study pages.
 - Dedicated resume route for hiring conversations.
-- Shared layout shell with sticky navigation, skip link, footer, toast providers, and tooltip support.
+- Shared layout shell with sticky navigation, footer, toast providers, and tooltip support.
 - Responsive styling through Tailwind utilities and custom CSS design tokens.
 - Static project artwork under `public/projects`.
 
@@ -113,14 +113,14 @@ To add a new case study:
 
 The visual language is defined mostly in `src/index.css` and extended by `tailwind.config.ts`.
 
-- CSS variables define the warm background, foreground, `#6F82E2` blue accent, radius, shadows, and type scale.
+- CSS variables define the warm background, foreground, `#4343E5` blue accent, radius, shadows, and type scale.
 - `.page-wrap` and `.content-wrap` control consistent page widths.
 - `.surface`, `.pill-cta`, `.pill-ghost`, `.eyebrow`, `.display`, and related classes provide reusable visual patterns.
 - Tailwind utilities handle responsive layout, spacing, grid behavior, and component composition.
 
 ## Key Components
 
-- `SiteShell` wraps every route with the header, main landmark, skip link, and footer.
+- `SiteShell` wraps every route with the header, main landmark, and footer.
 - `SiteHeader` provides primary navigation and mail CTA.
 - `SiteFooter` renders contact links and copyright.
 - `ProjectCard` renders homepage case study cards.

@@ -112,7 +112,7 @@ The current case studies are:
 
 ### Layout Components
 
-- `SiteShell` creates the shared page frame and accessibility skip link.
+- `SiteShell` creates the shared page frame around the header, main content, and footer.
 - `SiteHeader` renders the sticky navigation, brand link, section links, resume link, and email CTA.
 - `SiteFooter` renders copyright, email, and configured contact links.
 
@@ -136,7 +136,7 @@ Key design tokens include:
 
 - Warm cream background colors.
 - Dark neutral foreground colors.
-- `#6F82E2` blue accent and supporting gradient values.
+- `#4343E5` blue accent and supporting gradient values.
 - Reusable shadows.
 - Fluid type scale variables.
 - Display and body font stacks.
@@ -161,7 +161,7 @@ Reusable CSS classes include:
 
 Tailwind remains the primary layout layer, while CSS variables and component classes preserve the portfolio's visual identity.
 
-The accent color is defined in `src/index.css` as HSL `230 66% 66%`, matching `#6F82E2`. Some reusable CSS hooks still use legacy `coral` names for compatibility, but they now render the blue accent.
+The accent color is defined in `src/index.css` as HSL `240 76% 58%`, matching `#4343E5`. Text on primary and accent-colored controls uses white foreground tokens for contrast. Some reusable CSS hooks still use legacy `coral` names for compatibility, but they now render the blue accent.
 
 ## Assets
 
@@ -189,7 +189,6 @@ If the project grows, consider centralizing metadata updates in a small helper t
 
 Current accessibility considerations include:
 
-- A skip link in `SiteShell`.
 - Semantic `main`, `header`, `footer`, `nav`, `section`, `figure`, and list structures.
 - Focus-visible styling for interactive elements.
 - Meaningful `alt` text for project images and final screens.

@@ -34,7 +34,7 @@ const ProjectPage = () => {
         className="page-wrap grid items-center gap-8 max-[900px]:grid-cols-1"
         style={{
           gridTemplateColumns: "minmax(0,1.15fr) minmax(18rem,1fr)",
-          padding: "4.5rem 0 3rem",
+          padding: "6rem 0 4rem",
         }}
       >
         <div className="reveal">
@@ -47,6 +47,7 @@ const ProjectPage = () => {
               margin: "1.5rem 0 0.75rem",
               maxWidth: "36rem",
               fontSize: "var(--step-1)",
+              lineHeight: 1.6,
             }}
           >
             {project.summary}
@@ -56,13 +57,16 @@ const ProjectPage = () => {
           </p>
         </div>
 
-        <div className="surface overflow-hidden" style={{ padding: "1rem" }}>
+        <div
+          className="surface overflow-hidden"
+          style={{ padding: "1.5rem", borderRadius: "var(--radius-xl)", background: "hsl(var(--secondary))" }}
+        >
           <img
             src={project.coverImage}
             alt={project.altText}
             loading="eager"
             className="w-full"
-            style={{ borderRadius: "1.2rem" }}
+            style={{ borderRadius: "var(--radius-lg)" }}
           />
         </div>
       </section>
@@ -150,14 +154,14 @@ const ProjectPage = () => {
             <figure
               key={screen.src}
               className="surface overflow-hidden m-0"
-              style={{ padding: "1rem" }}
+              style={{ padding: "1.5rem", borderRadius: "var(--radius-xl)", background: "hsl(var(--secondary))" }}
             >
               <img
                 src={screen.src}
                 alt={screen.alt}
                 loading="lazy"
                 className="w-full"
-                style={{ borderRadius: "1.2rem" }}
+                style={{ borderRadius: "var(--radius-lg)" }}
               />
               {screen.caption && (
                 <figcaption className="muted mt-3 px-1">

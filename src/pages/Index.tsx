@@ -38,19 +38,19 @@ const Index = () => {
       {/* Hero */}
       <section
         className="page-wrap"
-        style={{ padding: "5rem 0 3.5rem" }}
+        style={{ padding: "7.5rem 0 5rem" }}
       >
-        <div className="grid gap-10 max-[900px]:gap-8" style={{ maxWidth: "62rem" }}>
+        <div className="grid gap-8 max-[900px]:gap-8" style={{ maxWidth: "53.75rem" }}>
           <div className="reveal">
             <span
               className="inline-flex items-center gap-2 rounded-full px-4 py-1.5"
               style={{
-                background: "hsl(var(--coral) / 0.10)",
-                border: "1px solid hsl(var(--coral) / 0.22)",
-                color: "hsl(var(--coral))",
-                fontSize: "0.85rem",
+                background: "hsl(var(--coral-soft))",
+                border: "1px solid hsl(var(--coral-subtle))",
+                color: "hsl(var(--coral-text))",
+                fontSize: "0.8125rem",
+                lineHeight: "1.125rem",
                 fontWeight: 500,
-                letterSpacing: "0.02em",
               }}
             >
               <span
@@ -69,9 +69,8 @@ const Index = () => {
           <h1
             className="display reveal reveal-2 m-0"
             style={{
-              fontSize: "clamp(2.8rem, 1.8rem + 5.5vw, 5.4rem)",
-              lineHeight: 1,
-              letterSpacing: "-0.035em",
+              fontSize: "var(--step-4)",
+              lineHeight: 1.125,
               maxWidth: "16ch",
             }}
           >
@@ -83,9 +82,9 @@ const Index = () => {
           <p
             className="muted reveal reveal-3 m-0"
             style={{
-              maxWidth: "40rem",
+              maxWidth: "42.5rem",
               fontSize: "var(--step-1)",
-              lineHeight: 1.55,
+              lineHeight: 1.6,
             }}
           >
             {siteContent.supportingLine}
@@ -120,9 +119,9 @@ const Index = () => {
             <p className="eyebrow">Portfolio</p>
             <h2
               className="display m-0"
-              style={{ fontSize: "var(--step-3)", lineHeight: 1.05, letterSpacing: "-0.02em" }}
+              style={{ fontSize: "var(--step-2)", lineHeight: 1.22 }}
             >
-              Featured <span className="coral-text">Work</span>
+              Selected <span className="coral-text">work</span>
             </h2>
             <p className="muted" style={{ marginTop: "0.75rem" }}>
               Selected case studies with structure, research depth, and measurable outcomes.
@@ -150,14 +149,14 @@ const Index = () => {
           className="surface grid gap-10 max-[900px]:grid-cols-1"
           style={{
             gridTemplateColumns: "minmax(0,1.4fr) minmax(16rem,0.9fr)",
-            padding: "2.5rem",
+            padding: "2rem",
           }}
         >
           <div className="grid gap-4">
             <p className="eyebrow">About</p>
             <h2
               className="display m-0 mb-2"
-              style={{ fontSize: "var(--step-2)", lineHeight: 1.1 }}
+              style={{ fontSize: "var(--step-2)", lineHeight: 1.22 }}
             >
               A research-led approach to <span className="coral-text">complex products</span>.
             </h2>
@@ -179,7 +178,7 @@ const Index = () => {
                 <li
                   key={c.name}
                   className="grid gap-0.5 pl-4"
-                  style={{ borderLeft: "2px solid hsl(var(--coral) / 0.4)" }}
+                  style={{ borderLeft: "2px solid hsl(var(--coral))" }}
                 >
                   <strong>{c.name}</strong>
                   {c.note && (
@@ -200,27 +199,29 @@ const Index = () => {
       {/* Closing CTA */}
       <section className="content-wrap" style={{ paddingBottom: "2rem" }}>
         <div
-          className="surface text-center grid place-items-center gap-5"
+          className="text-center grid place-items-center gap-5"
           style={{
             padding: "4rem 2rem",
-            background:
-              "linear-gradient(135deg, hsl(0 0% 100% / 0.85), hsl(36 60% 98% / 0.85))",
-            border: "1px solid hsl(var(--coral) / 0.22)",
+            background: "hsl(var(--foreground))",
+            borderRadius: "var(--radius-xl)",
+            color: "hsl(var(--background))",
           }}
         >
-          <p className="eyebrow m-0">Let's Work Together</p>
+          <p className="eyebrow m-0" style={{ color: "hsl(var(--coral-subtle))" }}>
+            Let's Work Together
+          </p>
           <h2
             className="display m-0"
             style={{
               fontSize: "var(--step-3)",
-              lineHeight: 1.05,
-              letterSpacing: "-0.02em",
+              lineHeight: 1.16,
               maxWidth: "22ch",
             }}
           >
-            Ready to design a <span className="coral-text">product system</span> that scales?
+            Ready to design a{" "}
+            <span style={{ color: "hsl(var(--coral-subtle))" }}>product system</span> that scales?
           </h2>
-          <p className="muted m-0" style={{ maxWidth: "34rem" }}>
+          <p className="m-0" style={{ maxWidth: "34rem", color: "hsl(var(--background) / 0.72)" }}>
             Let's talk about how research-led product design can drive measurable outcomes for your team.
           </p>
           <a

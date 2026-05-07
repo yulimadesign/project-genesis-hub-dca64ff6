@@ -7,40 +7,44 @@ interface Props {
 
 const ProjectCard = ({ project }: Props) => (
   <article
-    className="surface overflow-hidden group transition duration-300 hover:-translate-y-1.5"
-    style={{ position: "relative" }}
+    className="surface group transition hover:-translate-y-1"
+    style={{
+      position: "relative",
+      padding: "1rem",
+      borderRadius: "var(--radius-xl)",
+      transitionDuration: "var(--transition-base)",
+    }}
   >
     <Link
       to={`/projects/${project.slug}`}
       className="focus-ring grid h-full"
+      style={{ gridTemplateRows: "auto 1fr" }}
       aria-label={`View case study: ${project.cardTitle}`}
     >
-      <div className="relative overflow-hidden">
+      <div
+        className="relative overflow-hidden"
+        style={{
+          aspectRatio: "1448 / 1086",
+          borderRadius: "var(--radius-lg)",
+          background: "hsl(var(--secondary))",
+        }}
+      >
         <img
           src={project.coverImage}
           alt={project.altText}
           loading="lazy"
-          className="w-full h-full object-cover transition duration-500 group-hover:scale-[1.03]"
-          style={{ aspectRatio: "4 / 3" }}
-        />
-        <div
-          aria-hidden
-          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300"
-          style={{
-            background:
-              "linear-gradient(180deg, transparent 40%, hsl(var(--coral) / 0.18) 100%)",
-          }}
+          className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]"
         />
       </div>
-      <div className="p-6 pb-7 grid gap-3">
+      <div className="grid gap-3" style={{ padding: "1rem 0.25rem 0.25rem" }}>
         <p className="eyebrow m-0">Case Study</p>
         <h3
-          className="display m-0"
-          style={{ fontSize: "var(--step-1)", lineHeight: 1.18 }}
+          className="m-0"
+          style={{ fontSize: "1.375rem", lineHeight: "1.875rem", fontWeight: 500 }}
         >
           {project.cardTitle}
         </h3>
-        <p className="m-0 muted text-sm" style={{ lineHeight: 1.55 }}>
+        <p className="m-0 muted" style={{ fontSize: "0.9375rem", lineHeight: "1.5rem" }}>
           {project.summary}
         </p>
 
@@ -49,15 +53,16 @@ const ProjectCard = ({ project }: Props) => (
             {project.metrics.slice(0, 2).map((m) => (
               <div
                 key={`${m.value}-${m.label}`}
-                className="rounded-xl px-3 py-2"
+                className="px-3 py-2"
                 style={{
-                  background: "hsl(var(--coral) / 0.08)",
-                  border: "1px solid hsl(var(--coral) / 0.18)",
+                  background: "hsl(var(--coral-soft))",
+                  border: "1px solid hsl(var(--coral-subtle))",
+                  borderRadius: "var(--radius-md)",
                 }}
               >
                 <p
-                  className="display m-0 coral-text"
-                  style={{ fontSize: "1.05rem", lineHeight: 1.1 }}
+                  className="m-0 coral-text"
+                  style={{ fontSize: "1rem", lineHeight: 1.2, fontWeight: 500 }}
                 >
                   {m.value}
                 </p>
@@ -74,7 +79,7 @@ const ProjectCard = ({ project }: Props) => (
 
         <span
           className="mt-2 inline-flex items-center gap-1.5 text-sm"
-          style={{ color: "hsl(var(--coral))", fontWeight: 500 }}
+          style={{ color: "hsl(var(--coral-text))", fontWeight: 500 }}
         >
           View Case Study
           <span

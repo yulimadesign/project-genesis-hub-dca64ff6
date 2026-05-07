@@ -79,19 +79,29 @@ export const projects: Project[] = [
     ],
     finalScreens: [
       {
-        src: "/projects/starthub/final-01.svg",
-        alt: "StartHub onboarding checklist and workspace setup screen.",
-        caption: "Progress-first onboarding with lighter cognitive load.",
+        src: "/projects/starthub/key-screen-01.png",
+        alt: "StartHub onboarding step one on a laptop, asking users to select their areas of expertise.",
+        caption: "Step 1: expertise selection with clear progress and focused choices.",
       },
       {
-        src: "/projects/starthub/final-02.svg",
-        alt: "StartHub step detail screen with contextual guidance and simplified actions.",
-        caption: "Decision framing that explains the why before the action.",
+        src: "/projects/starthub/key-screen-02.png",
+        alt: "StartHub onboarding step two on a laptop, setting price per session.",
+        caption: "Step 2: pricing setup structured around duration and discounts.",
+      },
+      {
+        src: "/projects/starthub/key-screen-03.png",
+        alt: "StartHub onboarding step three on a laptop, connecting a calendar.",
+        caption: "Step 3: calendar connection with readable provider states.",
+      },
+      {
+        src: "/projects/starthub/key-screen-04.png",
+        alt: "StartHub onboarding step four on a laptop, setting availability.",
+        caption: "Step 4: availability setup with grouped scheduling blocks.",
       },
     ],
     reflection:
       "The project reinforced that onboarding quality is often less about adding more instruction and more about sequencing information in the order people can actually use it.",
-    coverImage: "/cases/starthub-card.png",
+    coverImage: "/projects/starthub/cover.png",
     altText:
       "StartHub onboarding concept card with interface panels and typography.",
   },
@@ -144,19 +154,19 @@ export const projects: Project[] = [
     ],
     finalScreens: [
       {
-        src: "/projects/sbermegamarket/final-01.svg",
-        alt: "SberMegaMarket content creation dashboard with workflow lanes and task modules.",
-        caption: "A clearer command surface for a dense internal process.",
+        src: "/projects/sbermegamarket/key-screen-01.png",
+        alt: "SberMegaMarket content management categories screen shown on an iMac.",
+        caption: "Content management workspace for assigning executors and deadlines.",
       },
       {
-        src: "/projects/sbermegamarket/final-02.svg",
-        alt: "SberMegaMarket content editor with metadata panels and system defaults.",
-        caption: "Guided creation patterns that accelerate repeat work.",
+        src: "/projects/sbermegamarket/key-screen-02.png",
+        alt: "SberMegaMarket sales dashboard shown on a MacBook Pro.",
+        caption: "Operational dashboard with sales, news, buyer inquiries, and order summaries.",
       },
     ],
     reflection:
       "This work underscored how much internal tools benefit from product-quality design when the real challenge is sustained operational clarity, not just visual polish.",
-    coverImage: "/cases/sbermegamarket-card.png",
+    coverImage: "/projects/sbermegamarket/cover.png",
     altText:
       "SberMegaMarket internal workflow card with interface panes and editorial typography.",
   },
@@ -209,19 +219,24 @@ export const projects: Project[] = [
     ],
     finalScreens: [
       {
-        src: "/projects/tetrika/final-01.svg",
-        alt: "Tetrika student dashboard with progress cards and next lesson panels.",
-        caption: "Progress-forward structure designed for quick comprehension.",
+        src: "/projects/tetrika/key-screen-01.png",
+        alt: "Tetrika library screen shown on a MacBook Pro.",
+        caption: "Library view with filters, favorites, and learning content cards.",
       },
       {
-        src: "/projects/tetrika/final-02.svg",
-        alt: "Tetrika dashboard detail view with assignments, streaks, and learning guidance.",
-        caption: "A more motivating hierarchy for continuing learning work.",
+        src: "/projects/tetrika/key-screen-02.png",
+        alt: "Tetrika schedule screen shown on an iPad Pro.",
+        caption: "Weekly schedule with clear lesson blocks and day-by-day planning.",
+      },
+      {
+        src: "/projects/tetrika/key-screen-03.png",
+        alt: "Tetrika student progress dashboard shown on an iPad Pro.",
+        caption: "Progress dashboard that makes goals, lessons, and next actions visible.",
       },
     ],
     reflection:
       "The strongest student dashboards do not just report information. They translate progress into a next step that feels manageable and worth doing.",
-    coverImage: "/cases/tetrika-card.png",
+    coverImage: "/projects/tetrika/cover.png",
     altText:
       "Tetrika dashboard card with educational interface blocks and typographic overlays.",
   },

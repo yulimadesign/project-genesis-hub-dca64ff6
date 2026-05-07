@@ -12,11 +12,11 @@ const SiteFooter = () => {
     >
       <div
         className="flex items-center justify-between gap-6 flex-wrap pt-6"
-        style={{ borderTop: "1px solid hsl(220 18% 12% / 0.10)" }}
+        style={{ borderTop: "1px solid hsl(var(--border))" }}
       >
         <div className="flex items-center gap-3">
-          <span className="display" style={{ fontWeight: 700 }}>
-            Yulia<span className="coral-text">.</span>McCoy
+          <span style={{ fontWeight: 500 }}>
+            Yulia McCoy
           </span>
           <span className="muted text-sm">
             © {year} — Senior Product Designer

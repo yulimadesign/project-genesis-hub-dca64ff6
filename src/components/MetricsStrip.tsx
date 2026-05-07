@@ -72,20 +72,30 @@ const MetricsStrip = ({ metrics, ariaLabel = "Selected outcomes" }: Props) => {
       style={{ margin: "0 auto 5rem" }}
     >
       <ul
-        className="grid gap-4 m-0 p-0 list-none max-[900px]:grid-cols-2 max-[480px]:grid-cols-1"
-        style={{ gridTemplateColumns: `repeat(${metrics.length}, minmax(0, 1fr))` }}
+        className="grid gap-5 m-0 p-0 list-none max-[900px]:grid-cols-2 max-[480px]:grid-cols-1"
+        style={{
+          gridTemplateColumns: `repeat(${metrics.length}, minmax(0, 1fr))`,
+        }}
       >
         {metrics.map((metric, i) => (
           <li
             key={`${metric.value}-${metric.label}`}
-            className="surface p-6 reveal"
+            className="surface reveal"
             style={{
               animationDelay: `${i * 0.08}s`,
+              minHeight: "9rem",
+              padding: "2rem",
+              borderRadius: "var(--radius-xl)",
+              background: "hsl(var(--secondary))",
             }}
           >
             <p
-              className="display m-0 mb-2 flex items-baseline"
-              style={{ fontSize: "var(--step-3)", lineHeight: 1, letterSpacing: "-0.03em" }}
+              className="m-0 mb-2 flex items-baseline"
+              style={{
+                fontSize: "2.5rem",
+                lineHeight: "3rem",
+                fontWeight: 500,
+              }}
             >
               <span className="coral-text">
                 <AnimatedNumber raw={metric.value} animate={visible} />

@@ -2,18 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Yulia McCoy portfolio — Compound-inspired warm minimal system.
-   Display: Sora. Body: Outfit. Accent: periwinkle blue gradient. All colors HSL. */
+/* Yulia McCoy portfolio design system: cool neutral base with digital lavender accents. */
 
 @layer base {
   :root {
-    /* Warm cream foundation */
-    --background: 36 40% 96%;          /* #f8f4ee */
-    --background-soft: 38 60% 98%;     /* #fcf9f3 */
-    --foreground: 220 18% 12%;         /* #191d24 */
-    --muted-foreground: 220 8% 42%;    /* #5f666f */
+    --color-bg-primary: #F7F7FB;
+    --color-bg-secondary: #F1F2F8;
+    --color-surface-default: #FFFFFF;
+    --color-surface-subtle: #FBFBFE;
+    --color-text-primary: #16181D;
+    --color-text-secondary: #646B7A;
+    --color-text-tertiary: #8C93A3;
+    --color-border-default: #E6E8F0;
+    --color-border-strong: #D7DBE7;
+    --color-accent-default: #7C72FF;
+    --color-accent-hover: #685BFA;
+    --color-accent-pressed: #5648E8;
+    --color-accent-soft: #F0EEFF;
+    --color-accent-subtle: #E7E4FF;
+    --color-accent-text: #5F52E6;
+
+    --color-success-default: #2E8B68;
+    --color-success-bg: #EAF8F1;
+    --color-warning-default: #C58A1B;
+    --color-warning-bg: #FFF5DF;
+    --color-error-default: #D14B5A;
+    --color-error-bg: #FDECEF;
+    --color-info-default: #7C72FF;
+    --color-info-bg: #F0EEFF;
+
+    --background: 240 33% 98%;         /* #F7F7FB */
+    --background-soft: 230 33% 96%;    /* #F1F2F8 */
+    --foreground: 220 14% 10%;         /* #16181D */
+    --muted-foreground: 222 10% 44%;   /* #646B7A */
+    --tertiary-foreground: 222 11% 59%;/* #8C93A3 */
 
     --surface: 0 0% 100%;
+    --surface-subtle: 240 60% 99%;
 
     --card: 0 0% 100%;
     --card-foreground: 220 18% 12%;
@@ -21,45 +46,76 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 18% 12%;
 
-    /* Accent gradient stops. Legacy "coral" names remain as styling hooks. */
-    --coral: 240 76% 58%;              /* #4343e5 — primary accent */
-    --coral-soft: 240 83% 72%;         /* #7d7df4 — gradient end */
-    --coral-glow: 240 76% 58% / 0.18;
+    /* Legacy "coral" hooks map to the lavender accent system for compatibility. */
+    --coral: 244 100% 72%;             /* #7C72FF */
+    --coral-soft: 249 100% 97%;        /* #F0EEFF */
+    --coral-subtle: 248 100% 95%;      /* #E7E4FF */
+    --coral-text: 245 75% 61%;         /* #5F52E6 */
+    --coral-glow: 244 100% 72% / 0.16;
+    --accent-hover: 245 95% 67%;       /* #685BFA */
+    --accent-pressed: 245 78% 60%;     /* #5648E8 */
 
-    --primary: 240 76% 58%;
+    --primary: 244 100% 72%;
     --primary-foreground: 0 0% 100%;
-    --accent: 240 76% 58%;
+    --accent: 244 100% 72%;
     --accent-foreground: 0 0% 100%;
 
-    --secondary: 36 30% 90%;
-    --secondary-foreground: 220 18% 12%;
+    --secondary: 230 33% 96%;
+    --secondary-foreground: 220 14% 10%;
 
-    --muted: 36 28% 92%;
+    --muted: 230 33% 96%;
 
-    --destructive: 0 70% 52%;
+    --destructive: 353 60% 56%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 18% 12% / 0.10;
-    --input: 220 18% 12%;
-    --ring: 240 76% 58%;
+    --border: 225 25% 92%;
+    --border-strong: 225 25% 87%;
+    --input: 225 25% 92%;
+    --ring: 244 100% 72%;
 
-    --radius: 1rem;
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 14px;
+    --radius-xl: 20px;
+    --radius-full: 999px;
+    --radius: var(--radius-lg);
 
-    /* Brand gradient */
-    --gradient-coral: linear-gradient(120deg, hsl(var(--coral)) 0%, hsl(var(--coral-soft)) 100%);
-    --shadow-coral: 0 1.2rem 2.4rem -1rem hsl(240 76% 58% / 0.35);
-    --shadow-soft: 0 1.5rem 3rem -2rem hsl(220 25% 12% / 0.18);
+    --shadow-sm: 0 1px 2px rgba(22, 24, 29, 0.05);
+    --shadow-md: 0 10px 28px rgba(22, 24, 29, 0.07);
+    --shadow-lg: 0 18px 52px rgba(22, 24, 29, 0.09);
+    --shadow-coral: var(--shadow-md);
+    --shadow-soft: var(--shadow-sm);
+    --gradient-coral: linear-gradient(135deg, #7C72FF 0%, #685BFA 100%);
 
-    /* Fluid type scale */
-    --step--1: clamp(0.9rem, 0.86rem + 0.2vw, 1rem);
-    --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.1rem);
-    --step-1: clamp(1.2rem, 1.05rem + 0.6vw, 1.45rem);
-    --step-2: clamp(1.55rem, 1.3rem + 1vw, 2.1rem);
-    --step-3: clamp(2.1rem, 1.7rem + 1.9vw, 3.25rem);
-    --step-4: clamp(3rem, 2.4rem + 2.8vw, 4.8rem);
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+    --space-8: 64px;
+    --space-9: 96px;
+    --space-10: 128px;
 
-    --font-display: "Sora", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-    --font-body: "Outfit", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --container-sm: 720px;
+    --container-md: 960px;
+    --container-lg: 1120px;
+    --container-xl: 1280px;
+
+    --transition-fast: 120ms cubic-bezier(0.2, 0, 0, 1);
+    --transition-base: 160ms cubic-bezier(0.2, 0, 0, 1);
+    --transition-slow: 240ms cubic-bezier(0.2, 0, 0, 1);
+
+    --step--1: 0.875rem;
+    --step-0: 1rem;
+    --step-1: 1.25rem;
+    --step-2: 2.25rem;
+    --step-3: 3rem;
+    --step-4: 4rem;
+
+    --font-display: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -112,7 +168,7 @@
 
 @layer base {
   * {
-    border-color: hsl(220 18% 12% / 0.10);
+    border-color: hsl(var(--border));
     box-sizing: border-box;
   }
 
@@ -127,10 +183,7 @@
     line-height: 1.6;
     margin: 0;
     min-height: 100vh;
-    background:
-      radial-gradient(circle at 88% 12%, hsl(var(--coral) / 0.18), transparent 32rem),
-      radial-gradient(circle at 8% 90%, hsl(var(--coral-soft) / 0.10), transparent 28rem),
-      linear-gradient(180deg, hsl(var(--background-soft)) 0%, hsl(var(--background)) 100%);
+    background: hsl(var(--background));
   }
 
   body::before {
@@ -146,8 +199,8 @@
   button:focus-visible,
   .focus-ring:focus-visible {
     outline: 3px solid hsl(var(--coral) / 0.45);
-    outline-offset: 4px;
-    border-radius: 4px;
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -162,33 +215,37 @@
 
 @layer components {
   .page-wrap {
-    width: min(82rem, calc(100vw - 2.5rem));
+    width: min(var(--container-lg), calc(100vw - 5rem));
     margin: 0 auto;
   }
   .content-wrap {
-    width: min(72rem, calc(100vw - 2.5rem));
+    width: min(var(--container-md), calc(100vw - 5rem));
     margin: 0 auto;
   }
   .surface {
-    background: hsl(0 0% 100% / 0.72);
-    border: 1px solid hsl(220 18% 12% / 0.08);
-    border-radius: 1.4rem;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: hsl(var(--surface));
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow-soft);
+  }
+  .surface:hover {
+    border-color: hsl(var(--border-strong));
+    box-shadow: var(--shadow-md);
   }
   .eyebrow {
     margin: 0 0 0.75rem;
     color: hsl(var(--coral));
-    font-size: var(--step--1);
-    letter-spacing: 0.18em;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    letter-spacing: 0.06em;
     font-weight: 500;
     text-transform: uppercase;
   }
   .section-label {
     margin: 0 0 0.75rem;
-    font-size: var(--step--1);
-    letter-spacing: 0.18em;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    letter-spacing: 0.06em;
     font-weight: 500;
     text-transform: uppercase;
     color: hsl(var(--muted-foreground));
@@ -196,31 +253,27 @@
   .section-title {
     margin: 0;
     font-family: var(--font-display);
-    font-weight: 600;
+    font-weight: 500;
     font-size: var(--step-2);
-    line-height: 1.12;
-    letter-spacing: -0.01em;
+    line-height: 1.22;
+    letter-spacing: 0;
   }
   .display {
     font-family: var(--font-display);
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-weight: 500;
+    letter-spacing: 0;
   }
   .case-hero-title {
-    font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2.4rem);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
+    font-size: var(--step-3);
+    line-height: 1.16;
+    letter-spacing: 0;
     max-width: 26ch;
   }
   .muted {
     color: hsl(var(--muted-foreground));
   }
   .coral-text {
-    background: var(--gradient-coral);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
+    color: hsl(var(--coral-text));
   }
   .coral-underline {
     position: relative;
@@ -233,43 +286,57 @@
     left: 0;
     right: 0;
     bottom: 0.04em;
-    height: 0.42em;
-    background: var(--gradient-coral);
-    opacity: 0.85;
+    height: 0.32em;
+    background: hsl(var(--coral-soft));
+    opacity: 1;
     z-index: -1;
     border-radius: 0.2em;
   }
   .pill-cta {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+    min-height: 44px;
     gap: 0.5rem;
-    padding: 0.85rem 1.6rem;
-    border-radius: 999px;
-    background: var(--gradient-coral);
+    padding: 0.875rem 1.375rem;
+    border-radius: var(--radius-full);
+    background: hsl(var(--coral));
     color: hsl(var(--primary-foreground));
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
     font-weight: 500;
-    box-shadow: var(--shadow-coral);
-    transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+    text-decoration: none;
+    transition: transform var(--transition-base), background var(--transition-base);
   }
   .pill-cta:hover {
     transform: translateY(-1px);
-    filter: brightness(1.05);
+    background: hsl(var(--accent-hover));
+  }
+  .pill-cta:active {
+    transform: translateY(0);
+    background: hsl(var(--accent-pressed));
   }
   .pill-ghost {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
-    padding: 0.8rem 1.5rem;
-    border-radius: 999px;
-    background: hsl(0 0% 100% / 0.7);
-    border: 1px solid hsl(220 18% 12% / 0.12);
+    min-height: 44px;
+    padding: 0.875rem 1.375rem;
+    border-radius: var(--radius-full);
+    background: transparent;
+    border: 1px solid hsl(var(--border));
     color: hsl(var(--foreground));
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
     font-weight: 500;
-    transition: background 0.18s ease, border-color 0.18s ease;
+    text-decoration: none;
+    transition: background var(--transition-base), border-color var(--transition-base), color var(--transition-base), transform var(--transition-base);
   }
   .pill-ghost:hover {
-    background: hsl(0 0% 100%);
-    border-color: hsl(220 18% 12% / 0.22);
+    background: hsl(var(--coral-soft));
+    border-color: hsl(var(--border-strong));
+    color: hsl(var(--coral-text));
   }
   .metric-arrow {
     display: inline-flex;
@@ -278,7 +345,7 @@
     width: 1.6rem;
     height: 1.6rem;
     border-radius: 999px;
-    background: hsl(var(--coral) / 0.14);
+    background: hsl(var(--coral-soft));
     color: hsl(var(--coral));
     font-size: 0.85rem;
     margin-left: 0.4rem;
@@ -286,7 +353,7 @@
   .reveal {
     opacity: 0;
     transform: translateY(14px);
-    animation: reveal-up 0.7s cubic-bezier(.2,.7,.2,1) forwards;
+    animation: reveal-up 0.55s cubic-bezier(0.2, 0, 0, 1) forwards;
   }
   .reveal-2 { animation-delay: 0.08s; }
   .reveal-3 { animation-delay: 0.16s; }
@@ -295,8 +362,14 @@
     to { opacity: 1; transform: translateY(0); }
   }
   @media (max-width: 720px) {
+    :root {
+      --step-1: 1.125rem;
+      --step-2: 1.75rem;
+      --step-3: 2.25rem;
+      --step-4: 2.5rem;
+    }
     .page-wrap, .content-wrap {
-      width: min(100vw - 1.5rem, 42rem);
+      width: min(100vw - 2.5rem, 42rem);
     }
   }
 }

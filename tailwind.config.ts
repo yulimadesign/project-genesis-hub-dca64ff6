@@ -15,7 +15,7 @@ export default {
     },
     extend: {
       colors: {
-        border: "hsl(213 18% 15% / 0.14)",
+        border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
@@ -65,8 +65,8 @@ export default {
         },
       },
       fontFamily: {
-        display: ["Sora", "Inter", "system-ui", "sans-serif"],
-        body: ["Outfit", "Inter", "system-ui", "sans-serif"],
+        display: ["Inter", "system-ui", "sans-serif"],
+        body: ["Inter", "system-ui", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

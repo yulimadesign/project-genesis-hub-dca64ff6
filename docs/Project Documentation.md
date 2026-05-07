@@ -134,9 +134,10 @@ The global style system is defined in `src/index.css`.
 
 Key design tokens include:
 
-- Warm cream background colors.
-- Dark neutral foreground colors.
-- `#4343E5` blue accent and supporting gradient values.
+- Cool neutral background colors: `#F7F7FB` primary and `#F1F2F8` secondary.
+- Clean white and soft-white surface colors.
+- High-contrast dark foreground colors with cool gray secondary text.
+- `#7C72FF` digital lavender accent with hover, pressed, soft, and selected states.
 - Reusable shadows.
 - Fluid type scale variables.
 - Display and body font stacks.
@@ -162,7 +163,7 @@ Reusable CSS classes include:
 
 Tailwind remains the primary layout layer, while CSS variables and component classes preserve the portfolio's visual identity.
 
-The accent color is defined in `src/index.css` as HSL `240 76% 58%`, matching `#4343E5`. Text on primary and accent-colored controls uses white foreground tokens for contrast. Some reusable CSS hooks still use legacy `coral` names for compatibility, but they now render the blue accent.
+The accent color is defined in `src/index.css` as HSL `244 100% 72%`, matching `#7C72FF`. Text on primary accent-colored controls uses white foreground tokens for contrast, while softer accent surfaces use the darker `#5F52E6` accent text color. Some reusable CSS hooks still use legacy `coral` names for compatibility, but they now render the digital lavender accent system.
 
 ## Assets
 

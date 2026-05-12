@@ -36,7 +36,12 @@ const ProjectCard = ({ project }: Props) => (
           className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]"
         />
       </div>
-      <div className="grid gap-3" style={{ padding: "1rem 0.25rem 0.25rem" }}>
+      <div
+        className="project-card-body grid gap-3"
+        style={{
+          padding: "1rem 0.25rem 0.25rem",
+        }}
+      >
         <p className="eyebrow m-0">Case Study</p>
         <h3
           className="m-0"
@@ -49,7 +54,7 @@ const ProjectCard = ({ project }: Props) => (
         </p>
 
         {project.metrics.length > 0 && (
-          <div className="mt-1 grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-2 self-start">
             {project.metrics.slice(0, 2).map((m) => (
               <div
                 key={`${m.value}-${m.label}`}

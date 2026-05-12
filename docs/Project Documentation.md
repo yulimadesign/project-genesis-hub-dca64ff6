@@ -102,6 +102,12 @@ This file controls:
 
 Each `Project` object controls a complete case study. The `slug` drives routing, `order` controls homepage/project navigation ordering, and image paths reference files in `public/projects`.
 
+Projects can optionally define `problemInsights` to render a compact challenge table on the case study page. Each row summarizes the issue, the observed signal, and the business risk.
+
+Projects can also define `onboardingFlowComparison` to render a before/after flow block that compares original and redesigned step counts.
+
+Projects can define `researchSignals`, `designMoves`, and `impactHighlights` to replace text-heavy lists with compact infographic cards for scannable case study storytelling. The selected case studies use these fields to make research inputs, design decisions, and impact summaries more visual.
+
 The current case studies are:
 
 - `starthub-user-onboarding`
@@ -118,9 +124,10 @@ The current case studies are:
 
 ### Portfolio Components
 
-- `ProjectCard` renders each homepage project card.
+- `ProjectCard` renders each homepage project card and keeps metric chips vertically aligned across the desktop card grid.
 - `MetricsStrip` renders a row/grid of metric summaries.
 - `CaseStudySection` standardizes case study section layout.
+- `ProjectPage` renders optional case-study insight tables, before/after step comparisons, infographic card groups, and compact final-screen grids when project data includes the corresponding visual content fields.
 - `ProjectNav` renders links to other case studies.
 - `ServicesStrip` and `NavLink` are available supporting components.
 
@@ -172,11 +179,11 @@ Static assets live in `public`.
 - `public/favicon.ico` is the favicon.
 - `public/robots.txt` configures crawler behavior.
 - `public/images/og-yulia-mccoy.svg` is the Open Graph-style image asset.
-- `public/cases/<project>-card.png` is used for homepage project cards and project hero cover images through each project's `coverImage`.
+- `public/projects/<project>/cover.png` stores the 1448 x 1086 laptop mockup cover used for homepage project cards and project hero images through each project's `coverImage`.
 - `public/projects/<project>/cover.svg` contains earlier SVG cover artwork that can still be reused if needed.
 - `public/projects/<project>/final-01.svg` and `final-02.svg` are used in case study final UI sections.
 
-Because Vite serves `public` from the site root, assets are referenced with root-relative URLs such as `/projects/starthub/cover.svg`.
+Because Vite serves `public` from the site root, assets are referenced with root-relative URLs such as `/projects/starthub/cover.png`.
 
 ## SEO And Metadata
 

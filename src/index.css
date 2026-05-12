@@ -350,6 +350,49 @@
     font-size: 0.85rem;
     margin-left: 0.4rem;
   }
+  .project-card-body {
+    grid-template-rows: auto auto auto auto auto;
+  }
+  .flow-steps {
+    grid-template-columns: repeat(auto-fit, minmax(6.75rem, 1fr));
+  }
+  .flow-step {
+    position: relative;
+    grid-template-rows: 2rem auto;
+    min-width: 0;
+  }
+  .flow-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    left: 2.4rem;
+    right: -0.35rem;
+    height: 1px;
+    background: hsl(var(--border-strong));
+  }
+  .flow-step-number {
+    position: relative;
+    z-index: 1;
+    display: inline-grid;
+    width: 2rem;
+    height: 2rem;
+    place-items: center;
+    border-radius: var(--radius-full);
+    background: var(--step-color);
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .flow-step-label {
+    min-width: 0;
+    color: hsl(var(--foreground));
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+  .design-move-card {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  }
   .reveal {
     opacity: 0;
     transform: translateY(14px);
@@ -370,6 +413,14 @@
     }
     .page-wrap, .content-wrap {
       width: min(100vw - 2.5rem, 42rem);
+    }
+    .design-move-card {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (min-width: 1001px) {
+    .project-card-body {
+      grid-template-rows: auto auto minmax(7.5rem, auto) auto auto;
     }
   }
 }

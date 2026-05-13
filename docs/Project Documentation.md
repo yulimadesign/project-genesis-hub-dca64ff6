@@ -126,7 +126,7 @@ The current case studies are:
 
 - `ProjectCard` renders each homepage project card and keeps metric chips vertically aligned across the desktop card grid.
 - `MetricsStrip` renders a row/grid of metric summaries.
-- `CaseStudySection` standardizes case study section layout.
+- `CaseStudySection` standardizes case study section layout and keeps list text aligned with visual cards in the content column.
 - `ProjectPage` renders optional case-study insight tables, before/after step comparisons, infographic card groups, and compact final-screen grids when project data includes the corresponding visual content fields.
 - `ProjectNav` renders links to other case studies.
 - `ServicesStrip` and `NavLink` are available supporting components.

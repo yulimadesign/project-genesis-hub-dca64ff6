@@ -18,7 +18,7 @@ const CaseStudySection = ({ label, title, children }: Props) => (
       <p className="section-label">{label}</p>
       <h2 className="section-title">{title}</h2>
     </div>
-    <div className="grid gap-4 [&_p]:m-0 [&_p]:leading-[1.625] [&_ul]:m-0 [&_ul]:pl-5 [&_li]:mb-2 [&_li]:leading-[1.625]">
+    <div className="grid gap-4 [&_p]:m-0 [&_p]:leading-[1.625] [&_ul]:m-0 [&_ul]:grid [&_ul]:list-none [&_ul]:gap-3 [&_ul]:p-0 [&_li]:m-0 [&_li]:leading-[1.625]">
       {children}
     </div>
   </section>

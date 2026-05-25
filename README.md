@@ -147,3 +147,4 @@ The current test suite contains a minimal Vitest smoke test. Add focused tests w
 - `README.md` is the main project guide.
 - `docs/Project Documentation.md` contains deeper architecture, content, styling, accessibility, testing, and deployment documentation.
 - `docs/Workflow Orchestration.md` describes the preferred planning, verification, and task-management workflow for future project work.
+  

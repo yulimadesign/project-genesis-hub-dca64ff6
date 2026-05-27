@@ -220,11 +220,7 @@ const ProjectPage = () => {
   return (
     <SiteShell>
       <section
-        className="page-wrap grid items-center gap-8 max-[900px]:grid-cols-1"
-        style={{
-          gridTemplateColumns: "minmax(0,1.15fr) minmax(18rem,1fr)",
-          padding: "6rem 0 4rem",
-        }}
+        className="case-hero page-wrap grid items-center gap-8"
       >
         <div className="reveal">
           <p className="eyebrow">Case Study</p>
@@ -247,8 +243,8 @@ const ProjectPage = () => {
         </div>
 
         <div
-          className="surface overflow-hidden"
-          style={{ padding: "1.5rem", borderRadius: "var(--radius-xl)", background: "hsl(var(--secondary))" }}
+          className="case-cover surface overflow-hidden"
+          style={{ borderRadius: "var(--radius-xl)", background: "hsl(var(--secondary))" }}
         >
           <img
             src={project.coverImage}
@@ -262,7 +258,7 @@ const ProjectPage = () => {
 
       <MetricsStrip metrics={project.metrics} />
 
-      <section className="content-wrap" style={{ marginTop: "-1.25rem" }}>
+      <section className="case-outcome content-wrap">
         <p
           className="muted m-0"
           style={{ maxWidth: "42rem", fontSize: "var(--step-1)" }}

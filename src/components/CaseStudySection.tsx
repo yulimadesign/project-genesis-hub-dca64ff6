@@ -8,11 +8,7 @@ interface Props {
 
 const CaseStudySection = ({ label, title, children }: Props) => (
   <section
-    className="content-wrap grid gap-8 max-[900px]:grid-cols-1"
-    style={{
-      gridTemplateColumns: "minmax(0, 0.8fr) minmax(0, 1.4fr)",
-      paddingTop: "5rem",
-    }}
+    className="case-section content-wrap grid gap-8"
   >
     <div className="self-start sticky top-28 max-[900px]:static">
       <p className="section-label">{label}</p>

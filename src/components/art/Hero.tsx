@@ -5,13 +5,13 @@ const Hero = () => (
     <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.08fr)_minmax(18rem,0.72fr)]">
       <div className="max-w-[54rem]">
         <p className="eyebrow">Artist Portfolio</p>
-        <h1 className="display m-0 max-w-[13ch] text-[2.7rem] leading-[1.08] sm:text-[4rem]">
+        <h1 className="art-hero-title display m-0 max-w-[13ch]">
           Paintings, drawings, and quiet observations of nature.
         </h1>
         <p className="muted m-0 mt-6 max-w-[39rem] text-lg leading-8">
           A selection of oil pastel, watercolor, graphics, and oil works by Yulia McCoy.
         </p>
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div className="mobile-action-stack mt-8 flex flex-wrap gap-3">
           <a href="#available-works" className="pill-cta focus-ring">
             View available works
           </a>

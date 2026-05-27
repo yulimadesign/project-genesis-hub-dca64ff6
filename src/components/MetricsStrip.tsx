@@ -72,15 +72,15 @@ const MetricsStrip = ({ metrics, ariaLabel = "Selected outcomes" }: Props) => {
       style={{ margin: "0 auto 5rem" }}
     >
       <ul
-        className="grid gap-5 m-0 p-0 list-none max-[900px]:grid-cols-2 max-[480px]:grid-cols-1"
+        className="metrics-grid grid gap-5 m-0 p-0 list-none max-[900px]:grid-cols-2 max-[480px]:grid-cols-1"
         style={{
-          gridTemplateColumns: `repeat(${metrics.length}, minmax(0, 1fr))`,
+          ["--metric-count" as string]: metrics.length,
         }}
       >
         {metrics.map((metric, i) => (
           <li
             key={`${metric.value}-${metric.label}`}
-            className="surface reveal"
+            className="metric-card surface reveal"
             style={{
               animationDelay: `${i * 0.08}s`,
               minHeight: "9rem",
@@ -90,7 +90,7 @@ const MetricsStrip = ({ metrics, ariaLabel = "Selected outcomes" }: Props) => {
             }}
           >
             <p
-              className="m-0 mb-2 flex items-baseline"
+              className="metric-card-value m-0 mb-2 flex items-baseline"
               style={{
                 fontSize: "2.5rem",
                 lineHeight: "3rem",

@@ -6,7 +6,7 @@ interface FilterTabsProps {
 }
 
 const FilterTabs = ({ activeCategory, onChange }: FilterTabsProps) => (
-  <div aria-label="Filter artworks by category" className="flex flex-wrap gap-2" role="tablist">
+  <div aria-label="Filter artworks by category" className="art-filter-tabs flex flex-wrap gap-2" role="tablist">
     {artworkCategories.map((category) => {
       const isActive = category === activeCategory;
 

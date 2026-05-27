@@ -19,8 +19,8 @@ const Resume = () => {
 
   return (
     <SiteShell>
-      <section className="page-wrap" style={{ padding: "6rem 0 3rem" }}>
-        <div className="surface" style={{ padding: "3rem" }}>
+      <section className="resume-section page-wrap">
+        <div className="resume-card surface">
           <p className="eyebrow">Resume</p>
           <h1
             className="display"
@@ -40,7 +40,7 @@ const Resume = () => {
           <a
             href={siteContent.resumeUrl}
             download
-            className="pill-cta focus-ring"
+            className="pill-cta focus-ring max-[720px]:w-full"
             style={{ marginTop: "1.5rem" }}
           >
             Download resume

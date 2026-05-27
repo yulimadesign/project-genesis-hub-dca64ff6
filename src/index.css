@@ -174,6 +174,7 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
@@ -184,6 +185,7 @@
     margin: 0;
     min-height: 100vh;
     background: hsl(var(--background));
+    overflow-x: hidden;
   }
 
   body::before {
@@ -353,6 +355,43 @@
   .project-card-body {
     grid-template-rows: auto auto auto auto auto;
   }
+  .metrics-grid {
+    grid-template-columns: repeat(var(--metric-count), minmax(0, 1fr));
+  }
+  .home-hero {
+    padding: 7.5rem 0 5rem;
+  }
+  .home-cta {
+    padding: 4rem 2rem;
+  }
+  .about-panel {
+    grid-template-columns: minmax(0, 1.4fr) minmax(16rem, 0.9fr);
+    padding: 2rem;
+  }
+  .case-hero {
+    grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 1fr);
+    padding: 6rem 0 4rem;
+  }
+  .case-cover {
+    padding: 1.5rem;
+  }
+  .case-outcome {
+    margin-top: -1.25rem;
+  }
+  .case-section {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr);
+    padding-top: 5rem;
+  }
+  .resume-section {
+    padding: 6rem 0 3rem;
+  }
+  .resume-card {
+    padding: 3rem;
+  }
+  .art-hero-title {
+    font-size: 4rem;
+    line-height: 1.08;
+  }
   .flow-steps {
     grid-template-columns: repeat(auto-fit, minmax(6.75rem, 1fr));
   }
@@ -411,11 +450,108 @@
       --step-3: 2.25rem;
       --step-4: 2.5rem;
     }
+    body {
+      font-size: 0.9375rem;
+    }
     .page-wrap, .content-wrap {
-      width: min(100vw - 2.5rem, 42rem);
+      width: min(100vw - 1.5rem, 42rem);
+    }
+    .section-title,
+    .case-hero-title {
+      overflow-wrap: anywhere;
+    }
+    .pill-cta,
+    .pill-ghost {
+      padding: 0.8125rem 1rem;
+      text-align: center;
+    }
+    .mobile-action-stack > a,
+    .mobile-action-stack > .pill-cta,
+    .mobile-action-stack > .pill-ghost {
+      width: 100%;
+    }
+    .surface {
+      border-radius: var(--radius-md);
+    }
+    .metrics-grid {
+      grid-template-columns: 1fr;
+    }
+    .metric-card {
+      min-height: auto !important;
+      padding: 1.25rem !important;
+    }
+    .metric-card-value {
+      font-size: 2rem !important;
+      line-height: 2.375rem !important;
+    }
+    .home-hero {
+      padding: 4.25rem 0 3.25rem;
+    }
+    .home-cta {
+      padding: 2.5rem 1rem;
+      text-align: left;
+      place-items: start;
+    }
+    .about-panel {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 1.25rem;
+    }
+    .case-hero {
+      grid-template-columns: 1fr;
+      padding: 3.75rem 0 2.5rem;
+    }
+    .case-cover {
+      padding: 0.75rem;
+    }
+    .case-outcome {
+      margin-top: 0;
+    }
+    .case-section {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      padding-top: 3.5rem;
+    }
+    .resume-section {
+      padding: 3.75rem 0 2rem;
+    }
+    .resume-card {
+      padding: 1.25rem;
+    }
+    .art-hero-title {
+      font-size: 2.5rem;
+      line-height: 1.1;
+    }
+    .art-filter-tabs {
+      flex-wrap: nowrap;
+      margin-inline: -0.75rem;
+      overflow-x: auto;
+      padding: 0 0.75rem 0.25rem;
+      scrollbar-width: none;
+    }
+    .art-filter-tabs::-webkit-scrollbar {
+      display: none;
+    }
+    .art-filter-tabs > button {
+      flex: 0 0 auto;
+    }
+    .flow-steps {
+      grid-template-columns: 1fr;
+    }
+    .flow-step:not(:last-child)::after {
+      left: 1rem;
+      right: auto;
+      top: 2.35rem;
+      bottom: -0.85rem;
+      width: 1px;
+      height: auto;
     }
     .design-move-card {
       grid-template-columns: 1fr;
+    }
+    .site-footer-links,
+    .site-footer-meta {
+      width: 100%;
     }
   }
   @media (min-width: 1001px) {

@@ -11,7 +11,7 @@ const ContactSection = () => (
           Contact me to work together.
         </p>
       </div>
-      <div className="flex flex-wrap gap-3 sm:justify-end">
+      <div className="mobile-action-stack flex flex-wrap gap-3 sm:justify-end">
         <a href={`mailto:${artContact.email}`} className="pill-cta focus-ring">
           Request availability
         </a>

@@ -14,7 +14,7 @@ const SiteFooter = () => {
         className="flex items-center justify-between gap-6 flex-wrap pt-6"
         style={{ borderTop: "1px solid hsl(var(--border))" }}
       >
-        <div className="flex items-center gap-3">
+        <div className="site-footer-meta flex items-center gap-3 max-[720px]:flex-col max-[720px]:items-start max-[720px]:gap-1">
           <span style={{ fontWeight: 500 }}>
             Yulia McCoy
           </span>
@@ -23,7 +23,7 @@ const SiteFooter = () => {
           </span>
         </div>
 
-        <ul className="flex flex-wrap items-center gap-x-5 gap-y-2 m-0 p-0 list-none text-sm">
+        <ul className="site-footer-links flex flex-wrap items-center gap-x-5 gap-y-2 m-0 p-0 list-none text-sm max-[720px]:items-start">
           <li>
             <a
               href={`mailto:${email}`}

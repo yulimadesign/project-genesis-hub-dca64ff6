@@ -37,8 +37,7 @@ const Index = () => {
     <SiteShell>
       {/* Hero */}
       <section
-        className="page-wrap"
-        style={{ padding: "7.5rem 0 5rem" }}
+        className="home-hero page-wrap"
       >
         <div className="grid gap-8 max-[900px]:gap-8" style={{ maxWidth: "53.75rem" }}>
           <div className="reveal">
@@ -90,7 +89,7 @@ const Index = () => {
             {siteContent.supportingLine}
           </p>
 
-          <div className="reveal reveal-4 flex flex-wrap items-center gap-3">
+          <div className="mobile-action-stack reveal reveal-4 flex flex-wrap items-center gap-3">
             <Link to="/#projects" className="pill-cta focus-ring">
               View Case Studies
               <span aria-hidden>→</span>
@@ -146,11 +145,7 @@ const Index = () => {
         style={{ paddingBottom: "5rem", scrollMarginTop: "6rem" }}
       >
         <div
-          className="surface grid gap-10 max-[900px]:grid-cols-1"
-          style={{
-            gridTemplateColumns: "minmax(0,1.4fr) minmax(16rem,0.9fr)",
-            padding: "2rem",
-          }}
+          className="about-panel surface grid gap-10"
         >
           <div className="grid gap-4">
             <p className="eyebrow">About</p>
@@ -199,9 +194,8 @@ const Index = () => {
       {/* Closing CTA */}
       <section className="content-wrap" style={{ paddingBottom: "2rem" }}>
         <div
-          className="text-center grid place-items-center gap-5"
+          className="home-cta text-center grid place-items-center gap-5 max-[720px]:place-items-start max-[720px]:text-left"
           style={{
-            padding: "4rem 2rem",
             background: "hsl(var(--foreground))",
             borderRadius: "var(--radius-xl)",
             color: "hsl(var(--background))",

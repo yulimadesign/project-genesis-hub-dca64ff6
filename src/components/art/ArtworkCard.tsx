@@ -31,7 +31,7 @@ const ArtworkCard = ({ artwork }: ArtworkCardProps) => {
         />
       </div>
       <div className="grid gap-3">
-        <div className="flex items-start justify-between gap-4">
+        <div className="flex items-start justify-between gap-4 max-[420px]:flex-col max-[420px]:gap-2">
           <div>
             <h3 className="m-0 text-xl font-medium leading-tight text-foreground">
               {artwork.title}
@@ -49,7 +49,7 @@ const ArtworkCard = ({ artwork }: ArtworkCardProps) => {
           )}
         </div>
         {(artwork.year || artwork.size) && (
-          <dl className="m-0 grid grid-cols-2 gap-x-5 gap-y-1 text-sm">
+          <dl className="m-0 grid grid-cols-2 gap-x-5 gap-y-1 text-sm max-[420px]:grid-cols-1">
             {artwork.year && (
               <div className="flex justify-between gap-3 border-t pt-2">
                 <dt className="muted">Year</dt>

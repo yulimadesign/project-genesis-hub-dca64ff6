@@ -203,11 +203,24 @@ Reusable CSS classes include:
 - `.pill-cta`
 - `.pill-ghost`
 - `.metric-arrow`
+- `.metrics-grid`
+- `.home-hero`
+- `.home-cta`
+- `.about-panel`
+- `.case-hero`
+- `.case-section`
+- `.resume-section`
+- `.art-hero-title`
 - `.reveal`
 
 Tailwind remains the primary layout layer, while CSS variables and component classes preserve the portfolio's visual identity.
 
 The accent color is defined in `src/index.css` as HSL `244 100% 72%`, matching `#7C72FF`. Text on primary accent-colored controls uses white foreground tokens for contrast, while softer accent surfaces use the darker `#5F52E6` accent text color. Some reusable CSS hooks still use legacy `coral` names for compatibility, but they now render the digital lavender accent system.
+
+Mobile rules live mostly in the `max-width: 720px` block in `src/index.css`.
+Shared mobile behavior includes narrower page gutters, stacked CTA groups, one-column
+metric grids, one-column case-study layouts, compact resume cards, and horizontally
+scrollable artist category tabs.
 
 ## Assets
 

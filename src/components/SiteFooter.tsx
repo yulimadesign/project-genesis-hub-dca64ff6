@@ -34,11 +34,16 @@ const SiteFooter = () => {
           </li>
           {contactLinks.map((link) => {
             const isInternal = link.href.startsWith("/");
+            const isDownload = link.href.endsWith(".pdf");
             const className =
               "focus-ring muted hover:text-foreground transition";
             return (
               <li key={link.label}>
-                {isInternal ? (
+                {isDownload ? (
+                  <a href={link.href} download className={className}>
+                    {link.label}
+                  </a>
+                ) : isInternal ? (
                   <Link to={link.href} className={className}>
                     {link.label}
                   </Link>

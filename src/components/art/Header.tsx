@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { siteContent } from "@/data/site";
 import { artContact } from "@/data/artworks";
 
 const Header = () => (
@@ -30,12 +31,13 @@ const Header = () => (
           >
             Artist Portfolio
           </Link>
-          <Link
-            to="/resume"
+          <a
+            href={siteContent.resumeUrl}
+            download
             className="focus-ring hidden rounded-full px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline-flex"
           >
             Resume
-          </Link>
+          </a>
           <a href={`mailto:${artContact.email}`} className="pill-ghost focus-ring text-sm">
             Contact
           </a>

@@ -44,12 +44,13 @@ const SiteHeader = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  to={resumeUrl}
+                <a
+                  href={resumeUrl}
+                  download
                   className="focus-ring hover:text-coral transition-colors px-3 py-2 rounded-full text-sm"
                 >
                   Resume
-                </Link>
+                </a>
               </li>
             </ul>
             <a

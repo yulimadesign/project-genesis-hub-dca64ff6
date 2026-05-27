@@ -308,14 +308,18 @@ npm run test
 2. Update `email`, `linkedinUrl`, `resumeUrl`, `paintingPortfolioUrl`, or `contactLinks`.
 3. Confirm header, footer, and CTA links still point to the expected destinations.
 
-### Replace Resume Route With A PDF
+### Resume PDF Download
 
-The current `/resume` route is a lightweight page. To switch to a PDF:
+The header Resume links download the hosted PDF at `/files/yulia-mccoy-resume.pdf`.
+The source asset lives in `public/files/yulia-mccoy-resume.pdf`, and
+`resumeUrl` plus the Resume contact link in `src/data/site.ts` should stay pointed
+at that path.
 
-1. Add the PDF to `public`.
-2. Update `resumeUrl` in `src/data/site.ts` to point to the PDF path.
-3. Decide whether to keep or remove `src/pages/Resume.tsx`.
-4. Update routes if `/resume` should redirect or no longer render a React page.
+To replace the file later:
+
+1. Export the new PDF.
+2. Replace `public/files/yulia-mccoy-resume.pdf`.
+3. Confirm header and contact links still download the expected document.
 
 ## Testing Strategy
 

@@ -78,6 +78,8 @@ Routing is handled by `react-router-dom` in `src/App.tsx`.
 
 `ProjectPage` reads the `slug` route parameter, looks up the corresponding project with `getProjectBySlug`, and redirects unknown slugs to `/404` through the catch-all route.
 
+`App` includes a route-change scroll reset so direct navigation to routes such as `/art` starts at the top of the page. Hash links such as `/#projects` keep their target-section behavior.
+
 ## Data Model
 
 ### Global Site Content
@@ -137,7 +139,7 @@ The current case studies are:
 
 The `artworks` array controls the artist portfolio gallery at `/art`. Each artwork includes a stable `id`, title, image path, and accessible alt text. Works can optionally include category, medium, year, size, price, and `status: "sold"` when those details are confirmed. Category filters are frontend-only and compare each artwork's `category` to the selected tab; uncategorized works appear in `All`.
 
-Artwork image paths point to `public/images/art/works/*.jpeg`. The current artwork images were copied from the local `картины copy` folder and renamed to URL-safe filenames. Files from `картины copy/продано` are marked as sold in the data file.
+Artwork image paths point to `public/images/art/works/*.jpeg`. The current artwork images were copied from the local `картины copy` folder and renamed to URL-safe filenames. Files from `картины copy/продано` are marked as sold in the data file. Images can remain in `public` as archived assets even when their corresponding `artworks` entry is removed from the live gallery.
 
 ## Component Responsibilities
 

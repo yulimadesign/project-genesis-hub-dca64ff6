@@ -147,12 +147,6 @@ export const artworks: Artwork[] = [
     alt: "Untitled study 1 by Yulia McCoy",
   },
   {
-    id: "untitled-study-2",
-    title: "Untitled study 2",
-    image: "/images/art/works/untitled-study-2.jpeg",
-    alt: "Untitled study 2 by Yulia McCoy",
-  },
-  {
     id: "untitled-study-3",
     title: "Untitled study 3",
     image: "/images/art/works/untitled-study-3.jpeg",

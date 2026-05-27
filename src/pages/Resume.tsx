@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import SiteShell from "@/components/SiteShell";
+import { siteContent } from "@/data/site";
 
 const Resume = () => {
   useEffect(() => {
@@ -12,7 +13,7 @@ const Resume = () => {
     }
     metaDesc.setAttribute(
       "content",
-      "Resume snapshot and availability for product design roles."
+      "Download Yulia McCoy's product design resume."
     );
   }, []);
 
@@ -30,13 +31,20 @@ const Resume = () => {
               lineHeight: 1,
             }}
           >
-            Resume snapshot for product design hiring conversations.
+            Resume for product design hiring conversations.
           </h1>
           <p style={{ maxWidth: "42rem" }}>
-            This route is a lightweight resume destination for the MVP so navigation
-            can open in a new tab without waiting on a final PDF export. Replace it
-            later with a hosted PDF if preferred.
+            Download the latest PDF resume for product design, UX design, and
+            research-informed workflow design roles.
           </p>
+          <a
+            href={siteContent.resumeUrl}
+            download
+            className="pill-cta focus-ring"
+            style={{ marginTop: "1.5rem" }}
+          >
+            Download resume
+          </a>
 
           <div
             className="grid grid-cols-2 gap-8 max-[720px]:grid-cols-1"

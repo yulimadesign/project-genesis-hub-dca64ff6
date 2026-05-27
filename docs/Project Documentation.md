@@ -73,7 +73,7 @@ Routing is handled by `react-router-dom` in `src/App.tsx`.
 | `/art` | `ArtistPortfolio` | Artist portfolio and collector inquiry page |
 | `/artist-portfolio` | `ArtistPortfolio` | Compatibility alias for the artist portfolio page |
 | `/projects/:slug` | `ProjectPage` | Dynamic case study detail page |
-| `/resume` | `Resume` | Lightweight resume destination |
+| `/resume` | `Resume` | Resume overview page with a PDF download CTA |
 | `*` | `NotFound` | Catch-all fallback |
 
 `ProjectPage` reads the `slug` route parameter, looks up the corresponding project with `getProjectBySlug`, and redirects unknown slugs to `/404` through the catch-all route.
@@ -228,7 +228,7 @@ Metadata is currently managed inside route components with `useEffect`.
 
 - `Index` sets the homepage document title and description.
 - `ProjectPage` sets a project-specific document title and description based on the active project.
-- `Resume` sets the resume document title and description.
+- `Resume` sets the resume document title and description and links to the downloadable PDF resume.
 
 If the project grows, consider centralizing metadata updates in a small helper to avoid repeating document title and meta description logic across pages.
 

@@ -306,6 +306,7 @@ npm run test
 
 1. Open `src/data/site.ts`.
 2. Update `email`, `linkedinUrl`, `resumeUrl`, `paintingPortfolioUrl`, or `contactLinks`.
+   The painting portfolio link should point to the internal `/art` route unless that experience moves off-site.
 3. Confirm header, footer, and CTA links still point to the expected destinations.
 
 ### Resume PDF Download

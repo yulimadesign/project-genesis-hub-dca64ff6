@@ -75,10 +75,10 @@ export const siteContent: SiteContent = {
   contactLinks: [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/yulia-mccoy" },
     { label: "Resume", href: "/files/yulia-mccoy-resume.pdf" },
-    { label: "View painting portfolio", href: "https://example.com/painting-portfolio" },
+    { label: "View painting portfolio", href: "/art" },
   ],
   resumeUrl: "/files/yulia-mccoy-resume.pdf",
   linkedinUrl: "https://www.linkedin.com/in/yulia-mccoy",
-  paintingPortfolioUrl: "https://example.com/painting-portfolio",
+  paintingPortfolioUrl: "/art",
   email: "melikhovau77@gmail.com",
 };

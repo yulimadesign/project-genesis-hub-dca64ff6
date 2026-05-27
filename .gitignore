@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+картины copy/
 
 # Editor directories and files
 .vscode/*

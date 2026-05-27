@@ -10,6 +10,7 @@ The project is optimized for:
 - Showcasing measurable outcomes through compact metrics.
 - Publishing detailed case studies with consistent structure.
 - Providing a lightweight resume route and contact pathways.
+- Publishing a dedicated artist portfolio and collector inquiry page.
 - Keeping future content updates low-friction.
 
 ## User Experience
@@ -22,6 +23,14 @@ The main user journey starts on the homepage and moves through these sections:
 4. **About:** gives context on experience, design approach, and selected companies.
 5. **Closing CTA:** invites prospective collaborators or hiring teams to start a conversation.
 6. **Footer:** repeats contact links and supporting portfolio destinations.
+
+The artist portfolio journey at `/art` is a calm, editorial collector inquiry page. The older `/artist-portfolio` path also renders the same page as a compatibility alias.
+
+1. **Hero:** introduces the artist portfolio and directs visitors to available works or contact.
+2. **Available works:** displays category filters and data-driven artwork cards.
+3. **Artwork inquiry cards:** show image, title, medium, year, size, price, and an email inquiry CTA.
+4. **About:** reuses the artist bio with a note connecting fine art, design, and product design.
+5. **Contact:** surfaces email, Instagram, and an availability request CTA.
 
 Case study pages follow a consistent long-form structure:
 
@@ -61,6 +70,8 @@ Routing is handled by `react-router-dom` in `src/App.tsx`.
 | Route | Component | Purpose |
 | --- | --- | --- |
 | `/` | `Index` | Homepage and portfolio overview |
+| `/art` | `ArtistPortfolio` | Artist portfolio and collector inquiry page |
+| `/artist-portfolio` | `ArtistPortfolio` | Compatibility alias for the artist portfolio page |
 | `/projects/:slug` | `ProjectPage` | Dynamic case study detail page |
 | `/resume` | `Resume` | Lightweight resume destination |
 | `*` | `NotFound` | Catch-all fallback |
@@ -114,6 +125,20 @@ The current case studies are:
 - `sbermegamarket-content-creation-app`
 - `tetrika-student-dashboard`
 
+### Artwork Content
+
+`src/data/artworks.ts` exports:
+
+- `artworkCategories`
+- `ArtworkCategory`
+- `Artwork`
+- `artworks`
+- `artContact`
+
+The `artworks` array controls the artist portfolio gallery at `/art`. Each artwork includes a stable `id`, title, image path, and accessible alt text. Works can optionally include category, medium, year, size, price, and `status: "sold"` when those details are confirmed. Category filters are frontend-only and compare each artwork's `category` to the selected tab; uncategorized works appear in `All`.
+
+Artwork image paths point to `public/images/art/works/*.jpeg`. The current artwork images were copied from the local `картины copy` folder and renamed to URL-safe filenames. Files from `картины copy/продано` are marked as sold in the data file.
+
 ## Component Responsibilities
 
 ### Layout Components
@@ -130,6 +155,16 @@ The current case studies are:
 - `ProjectPage` renders optional case-study insight tables, before/after step comparisons, infographic card groups, and compact final-screen grids when project data includes the corresponding visual content fields.
 - `ProjectNav` renders links to other case studies.
 - `ServicesStrip` and `NavLink` are available supporting components.
+
+### Artist Portfolio Components
+
+- `components/art/Header` renders the artist portfolio sticky header with Work, Artist Portfolio, Resume, and Contact destinations.
+- `components/art/Hero` renders the artist portfolio hero and primary CTAs.
+- `components/art/FilterTabs` renders keyboard-accessible category filter buttons.
+- `components/art/ArtworkGrid` maps filtered artwork data into responsive cards.
+- `components/art/ArtworkCard` renders artwork image, metadata, price, and email inquiry CTA.
+- `components/art/AboutSection` renders the artist bio and fine art/design background note.
+- `components/art/ContactSection` renders email, Instagram, and availability request CTAs.
 
 ### UI Primitive Components
 
@@ -179,6 +214,8 @@ Static assets live in `public`.
 - `public/favicon.ico` is the favicon.
 - `public/robots.txt` configures crawler behavior.
 - `public/images/og-yulia-mccoy.svg` is the Open Graph-style image asset.
+- `public/images/art/works/` stores artwork photographs for the `/art` gallery.
+- `public/images/art/yulia-gallery-hero.jpeg` is the uncropped artist portrait/gallery image used on the `/art` hero.
 - `public/projects/<project>/cover.png` stores the 1448 x 1086 laptop mockup cover used for homepage project cards and project hero images through each project's `coverImage`.
 - `public/projects/<project>/cover.svg` contains earlier SVG cover artwork that can still be reused if needed.
 - `public/projects/<project>/final-01.svg` and `final-02.svg` are used in case study final UI sections.
@@ -310,6 +347,8 @@ Recommended deployment steps:
 4. Deploy the generated `dist` directory to a static hosting provider.
 
 For client-side routing, configure the host to serve `index.html` for unknown paths so routes like `/projects/starthub-user-onboarding` work on refresh.
+
+This repo includes `public/_redirects` with `/* /index.html 200` so Cloudflare Pages serves the React app for direct client-side URLs such as `/art`, `/resume`, and `/projects/:slug`.
 
 ## Maintenance Notes
 

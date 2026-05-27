@@ -92,6 +92,8 @@ npm run test
 ## Application Routes
 
 - `/` renders the portfolio homepage.
+- `/art` renders the artist portfolio and collector inquiry page.
+- `/artist-portfolio` renders the same artist portfolio page as a compatibility alias.
 - `/projects/:slug` renders a case study from `src/data/projects.ts`.
 - `/resume` renders the resume snapshot page.
 - `*` renders the not-found page.

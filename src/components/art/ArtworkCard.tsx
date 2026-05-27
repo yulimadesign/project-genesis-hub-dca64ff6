@@ -10,10 +10,19 @@ const ArtworkCard = ({ artwork }: ArtworkCardProps) => {
     `Hi Yulia,\n\nI would like to inquire about "${artwork.title}".\n\nThank you,`,
   );
   const isSold = artwork.status === "sold";
+  const mediaAspectRatio =
+    artwork.orientation === "landscape"
+      ? "4 / 3"
+      : artwork.orientation === "square"
+        ? "1 / 1"
+        : "3 / 4";
 
   return (
     <article className="group grid gap-4">
-      <div className="relative overflow-hidden rounded-[8px] border bg-[hsl(var(--surface-subtle))]">
+      <div
+        className="relative overflow-hidden rounded-[8px] border bg-[hsl(var(--surface-subtle))]"
+        style={{ aspectRatio: mediaAspectRatio }}
+      >
         <div
           aria-hidden="true"
           className="absolute inset-0 grid place-items-center px-6 text-center text-sm text-muted-foreground"
@@ -23,7 +32,7 @@ const ArtworkCard = ({ artwork }: ArtworkCardProps) => {
         <img
           src={artwork.image}
           alt={artwork.alt}
-          className="relative aspect-[4/5] w-full object-contain p-3 transition duration-200 group-hover:scale-[1.01]"
+          className="relative h-full w-full object-cover transition duration-200 group-hover:scale-[1.01]"
           loading="lazy"
           onError={(event) => {
             event.currentTarget.style.opacity = "0";

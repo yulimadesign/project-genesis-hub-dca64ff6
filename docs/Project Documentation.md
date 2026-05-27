@@ -137,7 +137,9 @@ The current case studies are:
 - `artworks`
 - `artContact`
 
-The `artworks` array controls the artist portfolio gallery at `/art`. Each artwork includes a stable `id`, title, image path, and accessible alt text. Works can optionally include category, medium, year, size, price, and `status: "sold"` when those details are confirmed. Category filters are frontend-only and compare each artwork's `category` to the selected tab; uncategorized works appear in `All`.
+The `artworks` array controls the artist portfolio gallery at `/art`. Each artwork includes a stable `id`, title, orientation, image path, and accessible alt text. Works can optionally include category, medium, year, size, price, and `status: "sold"` when those details are confirmed. Category filters are frontend-only and compare each artwork's `category` to the selected tab; uncategorized works appear in `All`.
+
+`orientation` is required and should be `landscape`, `portrait`, or `square`. `ArtworkGrid` groups visible works by orientation so landscape pieces sit with landscape pieces and portrait pieces sit with portrait pieces. `ArtworkCard` uses the orientation to set the image frame aspect ratio and avoid large empty bands around horizontal paintings.
 
 Artwork image paths point to `public/images/art/works/*.jpeg`. The current artwork images were copied from the local `картины copy` folder and renamed to URL-safe filenames. Files from `картины copy/продано` are marked as sold in the data file. Images can remain in `public` as archived assets even when their corresponding `artworks` entry is removed from the live gallery.
 

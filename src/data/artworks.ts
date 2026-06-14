@@ -219,8 +219,8 @@ export const artworks: Artwork[] = [
   {
     id: "melon-2",
     title: "Melon 2",
-    orientation: "landscape",
-    placement: "bottom",
+    orientation: "square",
+    imageFit: "contain",
     image: "/images/art/works/melon-2.jpeg",
     alt: "Melon 2 by Yulia McCoy",
   },

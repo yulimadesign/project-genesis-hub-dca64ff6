@@ -66,22 +66,12 @@ const ArtworkGridContent = ({ artworks }: ArtworkGridProps) => {
               <X className="h-5 w-5" />
               <span className="sr-only">Close</span>
             </DialogClose>
-            <div className="grid h-full grid-rows-[1fr_auto]">
-              <div className="min-h-0 px-4 py-16 sm:px-8">
-                <img
-                  src={selectedArtwork.image}
-                  alt={selectedArtwork.alt}
-                  className="h-full w-full object-contain"
-                />
-              </div>
-              <div className="flex items-center justify-between gap-4 border-t border-white/15 bg-black/70 px-4 py-4 sm:px-8">
-                <div>
-                  <p className="m-0 text-base font-medium">{selectedArtwork.title}</p>
-                  {selectedArtwork.price && (
-                    <p className="m-0 mt-1 text-sm text-white/70">${selectedArtwork.price}</p>
-                  )}
-                </div>
-              </div>
+            <div className="grid h-full place-items-center p-4 sm:p-8">
+              <img
+                src={selectedArtwork.image}
+                alt={selectedArtwork.alt}
+                className="h-auto max-h-[calc(100dvh-2rem)] w-auto max-w-[calc(100vw-2rem)] object-contain sm:max-h-[calc(100dvh-4rem)] sm:max-w-[calc(100vw-4rem)]"
+              />
             </div>
           </DialogContent>
         )}

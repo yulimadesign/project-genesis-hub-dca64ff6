@@ -142,7 +142,7 @@ The `artworks` array controls the artist portfolio gallery at `/art`. Each artwo
 
 `orientation` is required and should be `landscape`, `portrait`, or `square`. `ArtworkGrid` groups visible works by orientation so landscape pieces sit with landscape pieces and portrait pieces sit with portrait pieces. `ArtworkCard` uses the orientation to set the image frame aspect ratio and avoid large empty bands around horizontal paintings. Set `imageFit: "contain"` on a specific artwork when the full image should remain visible inside the card frame instead of being cropped.
 
-Artwork image paths point to `public/images/art/works/*.jpeg`. The current artwork images were copied from the local `картины copy` folder and renamed to URL-safe filenames. Files from `картины copy/продано` are marked as sold in the data file. Images can remain in `public` as archived assets even when their corresponding `artworks` entry is removed from the live gallery.
+Artwork image paths point to `public/images/art/works/*.jpeg`. The current artwork images were copied from the local `картины copy` folder and renamed to URL-safe filenames. Files from `картины copy/продано` are marked as sold in the data file, while selected works from `картины copy/не выставочные` can be copied into `public/images/art/works` when they are added to the live gallery. Images can remain in `public` as archived assets even when their corresponding `artworks` entry is removed from the live gallery.
 
 ## Component Responsibilities
 

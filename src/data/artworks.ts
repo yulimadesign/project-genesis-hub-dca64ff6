@@ -192,12 +192,19 @@ export const artworks: Artwork[] = [
     alt: "Untitled study 6 by Yulia McCoy",
   },
   {
+    id: "radish-1",
+    title: "Radish 1",
+    orientation: "portrait",
+    image: "/images/art/works/radish-1.jpeg",
+    alt: "Radish 1 by Yulia McCoy",
+  },
+  {
     id: "untitled-study-7",
     title: "Malvas 1",
     orientation: "landscape",
     price: 520,
     imageFit: "contain",
-    image: "/images/art/works/untitled-study-7.jpeg",
+    image: "/images/art/works/malvas-1.jpeg",
     alt: "Malvas 1 by Yulia McCoy",
   },
   {
@@ -207,6 +214,13 @@ export const artworks: Artwork[] = [
     price: 160,
     image: "/images/art/works/untitled-study-8.jpeg",
     alt: "Melon 1 by Yulia McCoy",
+  },
+  {
+    id: "melon-2",
+    title: "Melon 2",
+    orientation: "landscape",
+    image: "/images/art/works/melon-2.jpeg",
+    alt: "Melon 2 by Yulia McCoy",
   },
 ];
 

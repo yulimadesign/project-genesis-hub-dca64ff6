@@ -166,7 +166,7 @@ Artwork image paths point to `public/images/art/works/*.jpeg`. The current artwo
 - `components/art/Header` renders the artist portfolio sticky header with the Yulia McCoy logo linking to `https://ymccoy.com/art` and a single Contact destination.
 - `components/art/Hero` renders the artist portfolio hero and primary CTAs.
 - `components/art/FilterTabs` renders the keyboard-accessible all-works tab.
-- `components/art/ArtworkGrid` maps filtered artwork data into responsive cards and owns the full-screen artwork lightbox state for `/art`, fitting opened images fully within the viewport.
+- `components/art/ArtworkGrid` maps filtered artwork data into responsive cards and owns the full-screen artwork lightbox state for `/art`, fitting opened images fully within the viewport and supporting previous/next navigation with on-screen arrows and keyboard arrow keys.
 - `components/art/ArtworkCard` renders artwork image, metadata, price, and email inquiry CTA; clicking the card opens the lightbox while the inquiry CTA keeps its mailto behavior.
 - `components/art/AboutSection` renders the artist bio.
 - `components/art/ContactSection` renders email, Instagram, and availability request CTAs.

@@ -15,6 +15,7 @@ export interface Artwork {
   price?: number;
   status?: "sold";
   imageFit?: "cover" | "contain";
+  placement?: "bottom";
   image: string;
   alt: string;
 }
@@ -219,6 +220,7 @@ export const artworks: Artwork[] = [
     id: "melon-2",
     title: "Melon 2",
     orientation: "landscape",
+    placement: "bottom",
     image: "/images/art/works/melon-2.jpeg",
     alt: "Melon 2 by Yulia McCoy",
   },

@@ -20,23 +20,25 @@ const ArtworkGrid = ({ artworks }: ArtworkGridProps) => (
 
 const ArtworkGridContent = ({ artworks }: ArtworkGridProps) => {
   const [selectedArtwork, setSelectedArtwork] = useState<Artwork | null>(null);
+  const bottomArtworks = artworks.filter((artwork) => artwork.placement === "bottom");
+  const groupedArtworks = artworks.filter((artwork) => artwork.placement !== "bottom");
 
   return (
     <>
       <div className="grid gap-14">
         {(["landscape", "portrait", "square"] as const).map((orientation) => {
-          const groupedArtworks = artworks.filter(
+          const orientationArtworks = groupedArtworks.filter(
             (artwork) => artwork.orientation === orientation,
           );
 
-          if (groupedArtworks.length === 0) return null;
+          if (orientationArtworks.length === 0) return null;
 
           return (
             <div
               key={orientation}
               className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3"
             >
-              {groupedArtworks.map((artwork) => (
+              {orientationArtworks.map((artwork) => (
                 <ArtworkCard
                   key={artwork.id}
                   artwork={artwork}
@@ -46,6 +48,17 @@ const ArtworkGridContent = ({ artworks }: ArtworkGridProps) => {
             </div>
           );
         })}
+        {bottomArtworks.length > 0 && (
+          <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            {bottomArtworks.map((artwork) => (
+              <ArtworkCard
+                key={artwork.id}
+                artwork={artwork}
+                onOpen={setSelectedArtwork}
+              />
+            ))}
+          </div>
+        )}
       </div>
       <Dialog
         open={selectedArtwork !== null}

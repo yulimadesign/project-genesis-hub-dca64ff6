@@ -27,10 +27,11 @@ The main user journey starts on the homepage and moves through these sections:
 The artist portfolio journey at `/art` is a calm, editorial collector inquiry page. The older `/artist-portfolio` path also renders the same page as a compatibility alias.
 
 1. **Hero:** introduces the artist portfolio and directs visitors to available works or contact.
-2. **Available works:** displays category filters and data-driven artwork cards.
+2. **Available works:** displays the all-works view and data-driven artwork cards.
 3. **Artwork inquiry cards:** show image, title, medium, year, size, price, and an email inquiry CTA.
-4. **About:** reuses the artist bio with a note connecting fine art, design, and product design.
-5. **Contact:** surfaces email, Instagram, and an availability request CTA.
+4. **Artwork lightbox:** opens a full-screen image preview from each artwork card on the `/art` gallery.
+5. **About:** presents the artist bio.
+6. **Contact:** surfaces email, Instagram, and an availability request CTA.
 
 Case study pages follow a consistent long-form structure:
 
@@ -137,9 +138,9 @@ The current case studies are:
 - `artworks`
 - `artContact`
 
-The `artworks` array controls the artist portfolio gallery at `/art`. Each artwork includes a stable `id`, title, orientation, image path, and accessible alt text. Works can optionally include category, medium, year, size, price, and `status: "sold"` when those details are confirmed. Category filters are frontend-only and compare each artwork's `category` to the selected tab; uncategorized works appear in `All`.
+The `artworks` array controls the artist portfolio gallery at `/art`. Each artwork includes a stable `id`, title, orientation, image path, and accessible alt text. Works can optionally include category, medium, year, size, price, custom `imageFit`, and `status: "sold"` when those details are confirmed. The gallery currently exposes only the `All` tab, so all live artworks remain visible together.
 
-`orientation` is required and should be `landscape`, `portrait`, or `square`. `ArtworkGrid` groups visible works by orientation so landscape pieces sit with landscape pieces and portrait pieces sit with portrait pieces. `ArtworkCard` uses the orientation to set the image frame aspect ratio and avoid large empty bands around horizontal paintings.
+`orientation` is required and should be `landscape`, `portrait`, or `square`. `ArtworkGrid` groups visible works by orientation so landscape pieces sit with landscape pieces and portrait pieces sit with portrait pieces. `ArtworkCard` uses the orientation to set the image frame aspect ratio and avoid large empty bands around horizontal paintings. Set `imageFit: "contain"` on a specific artwork when the full image should remain visible inside the card frame instead of being cropped.
 
 Artwork image paths point to `public/images/art/works/*.jpeg`. The current artwork images were copied from the local `картины copy` folder and renamed to URL-safe filenames. Files from `картины copy/продано` are marked as sold in the data file. Images can remain in `public` as archived assets even when their corresponding `artworks` entry is removed from the live gallery.
 
@@ -162,12 +163,12 @@ Artwork image paths point to `public/images/art/works/*.jpeg`. The current artwo
 
 ### Artist Portfolio Components
 
-- `components/art/Header` renders the artist portfolio sticky header with Work, Artist Portfolio, Resume, and Contact destinations.
+- `components/art/Header` renders the artist portfolio sticky header with the Yulia McCoy logo linking to `https://ymccoy.com/art` and a single Contact destination.
 - `components/art/Hero` renders the artist portfolio hero and primary CTAs.
-- `components/art/FilterTabs` renders keyboard-accessible category filter buttons.
-- `components/art/ArtworkGrid` maps filtered artwork data into responsive cards.
-- `components/art/ArtworkCard` renders artwork image, metadata, price, and email inquiry CTA.
-- `components/art/AboutSection` renders the artist bio and fine art/design background note.
+- `components/art/FilterTabs` renders the keyboard-accessible all-works tab.
+- `components/art/ArtworkGrid` maps filtered artwork data into responsive cards and owns the full-screen artwork lightbox state for `/art`.
+- `components/art/ArtworkCard` renders artwork image, metadata, price, and email inquiry CTA; clicking the card opens the lightbox while the inquiry CTA keeps its mailto behavior.
+- `components/art/AboutSection` renders the artist bio.
 - `components/art/ContactSection` renders email, Instagram, and availability request CTAs.
 
 ### UI Primitive Components

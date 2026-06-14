@@ -45,12 +45,8 @@ const ArtistPortfolio = () => {
             <div className="max-w-[38rem]">
               <p className="eyebrow">Available Works</p>
               <h2 id="available-works-title" className="section-title">
-                Collector inquiries
+                Available works
               </h2>
-              <p className="muted m-0 mt-3 leading-7">
-                Select a category to browse works and send a direct inquiry for details,
-                availability, or studio pickup and shipping options.
-              </p>
             </div>
             <FilterTabs activeCategory={activeCategory} onChange={setActiveCategory} />
           </div>

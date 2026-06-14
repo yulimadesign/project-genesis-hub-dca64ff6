@@ -1,9 +1,5 @@
 export const artworkCategories = [
   "All",
-  "Oil Pastel",
-  "Watercolor",
-  "Graphics",
-  "Oil",
 ] as const;
 
 export type ArtworkCategory = (typeof artworkCategories)[number];
@@ -18,6 +14,7 @@ export interface Artwork {
   size?: string;
   price?: number;
   status?: "sold";
+  imageFit?: "cover" | "contain";
   image: string;
   alt: string;
 }
@@ -100,6 +97,7 @@ export const artworks: Artwork[] = [
     id: "bushivalka",
     title: "Bushivalka",
     orientation: "landscape",
+    price: 1050,
     image: "/images/art/works/bushivalka.jpeg",
     alt: "Bushivalka by Yulia McCoy",
   },
@@ -107,6 +105,7 @@ export const artworks: Artwork[] = [
     id: "childhood-memories",
     title: "Childhood Memories",
     orientation: "portrait",
+    price: 1500,
     image: "/images/art/works/childhood-memories.jpeg",
     alt: "Childhood Memories by Yulia McCoy",
   },
@@ -137,6 +136,7 @@ export const artworks: Artwork[] = [
     id: "the-last-fog",
     title: "The Last Fog",
     orientation: "portrait",
+    price: 1200,
     image: "/images/art/works/the-last-fog.jpeg",
     alt: "The Last Fog by Yulia McCoy",
   },
@@ -150,10 +150,11 @@ export const artworks: Artwork[] = [
   },
   {
     id: "winter-in-the-forest",
-    title: "Winter in the Forest",
+    title: "Winter in the forest",
     orientation: "landscape",
+    price: 840,
     image: "/images/art/works/winter-in-the-forest.jpeg",
-    alt: "Winter in the Forest by Yulia McCoy",
+    alt: "Winter in the forest by Yulia McCoy",
   },
   {
     id: "untitled-study-1",
@@ -192,17 +193,20 @@ export const artworks: Artwork[] = [
   },
   {
     id: "untitled-study-7",
-    title: "Untitled study 7",
+    title: "Malvas 1",
     orientation: "landscape",
+    price: 520,
+    imageFit: "contain",
     image: "/images/art/works/untitled-study-7.jpeg",
-    alt: "Untitled study 7 by Yulia McCoy",
+    alt: "Malvas 1 by Yulia McCoy",
   },
   {
     id: "untitled-study-8",
-    title: "Untitled study 8",
+    title: "Melon 1",
     orientation: "landscape",
+    price: 160,
     image: "/images/art/works/untitled-study-8.jpeg",
-    alt: "Untitled study 8 by Yulia McCoy",
+    alt: "Melon 1 by Yulia McCoy",
   },
 ];
 

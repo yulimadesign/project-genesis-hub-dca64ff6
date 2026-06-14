@@ -2,9 +2,10 @@ import { artContact, type Artwork } from "@/data/artworks";
 
 interface ArtworkCardProps {
   artwork: Artwork;
+  onOpen: (artwork: Artwork) => void;
 }
 
-const ArtworkCard = ({ artwork }: ArtworkCardProps) => {
+const ArtworkCard = ({ artwork, onOpen }: ArtworkCardProps) => {
   const inquirySubject = encodeURIComponent(`Artwork inquiry: ${artwork.title}`);
   const inquiryBody = encodeURIComponent(
     `Hi Yulia,\n\nI would like to inquire about "${artwork.title}".\n\nThank you,`,
@@ -16,9 +17,22 @@ const ArtworkCard = ({ artwork }: ArtworkCardProps) => {
       : artwork.orientation === "square"
         ? "1 / 1"
         : "3 / 4";
+  const handleOpen = () => onOpen(artwork);
 
   return (
-    <article className="group grid gap-4">
+    <article
+      className="focus-ring group grid cursor-zoom-in gap-4 rounded-[10px]"
+      role="button"
+      tabIndex={0}
+      aria-label={`Open ${artwork.title} image`}
+      onClick={handleOpen}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          handleOpen();
+        }
+      }}
+    >
       <div
         className="relative overflow-hidden rounded-[8px] border bg-[hsl(var(--surface-subtle))]"
         style={{ aspectRatio: mediaAspectRatio }}
@@ -32,7 +46,9 @@ const ArtworkCard = ({ artwork }: ArtworkCardProps) => {
         <img
           src={artwork.image}
           alt={artwork.alt}
-          className="relative h-full w-full object-cover transition duration-200 group-hover:scale-[1.01]"
+          className={`relative h-full w-full transition duration-200 group-hover:scale-[1.01] ${
+            artwork.imageFit === "contain" ? "object-contain" : "object-cover"
+          }`}
           loading="lazy"
           onError={(event) => {
             event.currentTarget.style.opacity = "0";
@@ -81,6 +97,8 @@ const ArtworkCard = ({ artwork }: ArtworkCardProps) => {
           <a
             href={`mailto:${artContact.email}?subject=${inquirySubject}&body=${inquiryBody}`}
             className="focus-ring inline-flex min-h-11 items-center justify-center rounded-full border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-[hsl(var(--border-strong))] hover:bg-[hsl(var(--surface))]"
+            onClick={(event) => event.stopPropagation()}
+            onKeyDown={(event) => event.stopPropagation()}
           >
             Inquire
           </a>

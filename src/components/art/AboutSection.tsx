@@ -15,10 +15,6 @@ const AboutSection = () => (
           For me, it&apos;s not only about capturing the outer image, but also about expressing the
           inner movement of the soul&mdash;the energy that makes each piece unique.
         </p>
-        <p className="m-0 max-w-[36rem] text-sm leading-7 text-foreground">
-          Yulia brings together a background in fine art, design, and product design, shaping each
-          work with close observation, thoughtful structure, and a calm sensitivity to material.
-        </p>
       </div>
     </div>
   </section>

@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { siteContent } from "@/data/site";
 import { artContact } from "@/data/artworks";
 
 const Header = () => (
@@ -14,30 +12,13 @@ const Header = () => (
   >
     <div className="page-wrap">
       <div className="flex min-h-[72px] items-center justify-between gap-5">
-        <Link to="/" className="focus-ring text-base font-medium text-foreground">
+        <a
+          href="https://ymccoy.com/art"
+          className="focus-ring text-base font-medium text-foreground"
+        >
           Yulia McCoy
-        </Link>
+        </a>
         <nav aria-label="Artist portfolio navigation" className="flex items-center gap-1">
-          <Link
-            to="/#projects"
-            className="focus-ring hidden rounded-full px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline-flex"
-          >
-            Work
-          </Link>
-          <Link
-            to="/artist-portfolio"
-            aria-current="page"
-            className="focus-ring hidden rounded-full px-3 py-2 text-sm text-foreground transition-colors hover:text-foreground sm:inline-flex"
-          >
-            Artist Portfolio
-          </Link>
-          <a
-            href={siteContent.resumeUrl}
-            download
-            className="focus-ring hidden rounded-full px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground sm:inline-flex"
-          >
-            Resume
-          </a>
           <a href={`mailto:${artContact.email}`} className="pill-ghost focus-ring text-sm">
             Contact
           </a>

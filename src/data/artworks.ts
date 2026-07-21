@@ -22,6 +22,18 @@ export interface Artwork {
 
 export const artworks: Artwork[] = [
   {
+    id: "border-of-silence",
+    title: "Border of Silence",
+    orientation: "square",
+    medium: "Oil pastel on canvas",
+    year: "2026",
+    size: "40 x 40 inch",
+    price: 1780,
+    imageFit: "contain",
+    image: "/images/art/works/border-of-silence.jpeg",
+    alt: "Border of Silence by Yulia McCoy, oil pastel on canvas",
+  },
+  {
     id: "visitor",
     title: "Visitor",
     orientation: "landscape",

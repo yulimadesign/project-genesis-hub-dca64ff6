@@ -144,6 +144,8 @@ The `artworks` array controls the artist portfolio gallery at `/art`. Each artwo
 
 Artwork image paths point to `public/images/art/works/*.jpeg`. The current artwork images were copied from the local `картины copy` folder and renamed to URL-safe filenames. Files from `картины copy/продано` are marked as sold in the data file, while selected works from `картины copy/не выставочные` can be copied into `public/images/art/works` when they are added to the live gallery. Images can remain in `public` as archived assets even when their corresponding `artworks` entry is removed from the live gallery.
 
+`Border of Silence` is listed as a 2026 square oil pastel on canvas work using `public/images/art/works/border-of-silence.jpeg`, with `imageFit: "contain"` so the full artwork remains visible in the gallery card.
+
 ## Component Responsibilities
 
 ### Layout Components

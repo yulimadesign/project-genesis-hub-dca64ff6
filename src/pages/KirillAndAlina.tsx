@@ -39,27 +39,6 @@ const KirillAndAlina = () => {
       document.head.appendChild(metaDesc);
     }
     metaDesc.setAttribute("content", desc);
-        const styleId = "kirill-and-alina-nicoletta-font";
-    if (!document.getElementById(styleId)) {
-      const style = document.createElement("style");
-      style.id = styleId;
-      style.textContent = `
-        @font-face {
-          font-family: "Nicoletta Script SHA";
-          src: url("/Nicoletta%20Script%20SHA_1.otf") format("opentype");
-          font-weight: normal;
-          font-style: normal;
-          font-display: swap;
-        }
-
-        .wedding-title > p {
-          font-family: "Nicoletta Script SHA", cursive !important;
-          font-weight: normal !important;
-          text-transform: none !important;
-        }
-      `;
-      document.head.appendChild(style);
-    }
   }, []);
 
   return (

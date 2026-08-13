@@ -9,7 +9,7 @@ const invitation = {
   day: "10 октября",
   venue: "Ресторан \"Гости\"",
   address: "Лабинск, Владимирская ул., 177",
-  email: "melikhovau77@gmail.com",
+  email: "tararsovaa693gmail@yandex.ru",
   schedule: [
     { time: "12:30", label: "Сбор гостей" },
     { time: "13:00", label: "Церемония регистрации" },

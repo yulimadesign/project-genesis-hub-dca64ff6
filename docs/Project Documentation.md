@@ -11,6 +11,7 @@ The project is optimized for:
 - Publishing detailed case studies with consistent structure.
 - Providing a lightweight resume route and contact pathways.
 - Publishing a dedicated artist portfolio and collector inquiry page.
+- Publishing a standalone wedding invitation microsite at `/kirillandalina`.
 - Keeping future content updates low-friction.
 
 ## User Experience
@@ -32,6 +33,15 @@ The artist portfolio journey at `/art` is a calm, editorial collector inquiry pa
 4. **Artwork lightbox:** opens a full-screen image preview from each artwork card on the `/art` gallery.
 5. **About:** presents the artist bio.
 6. **Contact:** surfaces email, Instagram, and an availability request CTA.
+
+The wedding invitation journey at `/kirillandalina` is a mobile-first standalone microsite inspired by the source Tilda invitation for Kirill and Alina.
+
+1. **Decorative cover:** shows the couple names and date over the local calla lily hero image.
+2. **Invitation copy:** confirms the wedding date as 10 October 2026.
+3. **Schedule:** lists guest arrival, ceremony, dinner, and evening close times.
+4. **Venue:** shows restaurant imagery and the Labinsk address.
+5. **Flowers note:** asks guests to bring a bottle of wine with wishes instead of bouquets.
+6. **RSVP form:** posts guest names and attendance answers to `melikhovau77@gmail.com` through FormSubmit.
 
 Case study pages follow a consistent long-form structure:
 
@@ -73,6 +83,7 @@ Routing is handled by `react-router-dom` in `src/App.tsx`.
 | `/` | `Index` | Homepage and portfolio overview |
 | `/art` | `ArtistPortfolio` | Artist portfolio and collector inquiry page |
 | `/artist-portfolio` | `ArtistPortfolio` | Compatibility alias for the artist portfolio page |
+| `/kirillandalina` | `KirillAndAlina` | Mobile-first Kirill and Alina wedding invitation |
 | `/projects/:slug` | `ProjectPage` | Dynamic case study detail page |
 | `/resume` | `Resume` | Resume overview page with a PDF download CTA |
 | `*` | `NotFound` | Catch-all fallback |
@@ -173,6 +184,12 @@ Artwork image paths point to `public/images/art/works/*.jpeg`. The current artwo
 - `components/art/AboutSection` renders the artist bio.
 - `components/art/ContactSection` renders email, Instagram, and availability request CTAs.
 
+### Wedding Invitation Page
+
+- `pages/KirillAndAlina.tsx` renders the standalone wedding invitation content, schedule, venue, flowers note, and RSVP form.
+- The RSVP form submits to `https://formsubmit.co/melikhovau77@gmail.com`; the first live submission may require FormSubmit email activation for that recipient.
+- The page intentionally does not use `SiteShell`, so it can preserve the narrow mobile invitation look without the portfolio header and footer.
+
 ### UI Primitive Components
 
 `src/components/ui` contains reusable shadcn-style components such as buttons, dialogs, cards, tabs, accordions, forms, inputs, menus, tooltips, toasts, and other Radix-backed primitives. These components should be reused for future interactive UI instead of introducing one-off component implementations.
@@ -217,6 +234,10 @@ Reusable CSS classes include:
 - `.resume-section`
 - `.art-hero-title`
 - `.reveal`
+
+The wedding invitation uses route-specific classes prefixed with `.wedding-` in `src/index.css`. These styles keep the page constrained to a mobile invitation width, use `public/images/wedding/kirill-alina-hero.jpeg` for the opening cover, and provide a desktop wrapper only to center the mobile composition.
+
+The schedule invitation block uses `public/images/wedding/kirill-alina-invitation-bg.jpeg` as its pearlescent background image.
 
 Tailwind remains the primary layout layer, while CSS variables and component classes preserve the portfolio's visual identity.
 

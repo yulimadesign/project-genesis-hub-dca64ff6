@@ -91,9 +91,7 @@ const KirillAndAlina = () => {
       <section className="wedding-flowers" aria-labelledby="wedding-flowers-title">
         <h2 id="wedding-flowers-title">Цветы</h2>
         <p>
-          Невеста очень любит цветы, но не сможет в полной мере насладиться ими в
-          этот день. Вместо букетов мы будем рады бутылочке вина с теплыми
-          пожеланиями!
+          Невеста очень любит цветы, но не сможет в полной мере насладиться ими в этот день. Вместо букетов мы будем рады памятному и эмоциональному подарку с теплыми пожеланиями!
         </p>
         <div className="wedding-flowers__photo" role="img" aria-label="Бокалы вина" />
       </section>
